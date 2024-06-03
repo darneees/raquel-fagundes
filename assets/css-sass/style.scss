@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5vh;
 }
 
 body {
@@ -51,10 +50,6 @@ nav {
         list-style: none;
     }
 
-    .nav__menu-mobile {
-        display: none;
-    }
-
     .nav__button {
         @include align(center, center, row, .5rem);
         background-color: $red-10;
@@ -89,12 +84,13 @@ nav {
 
 .nav__mobile-menu {
     @include align(center, center, column, 0);
+    position: fixed;
     background-color: $blue-20;
     width: 100%;
     height: 100vh;
-    position: fixed;
     top: 0;
     left: 0;
+    padding: 0;
     z-index: 3;
     display: none;
 
@@ -114,13 +110,14 @@ nav {
     }
 
     .nav__mobile-links {
-        @include align(start, center, column, 3.5rem);
+        @include align(start, center, column, 2rem);
         list-style: none;
 
         li {
             a {
+                @include align(center, center, row, .5rem);
                 color: $white-10;
-                font-size: 2rem;
+                font-size: 1.7rem;
                 text-decoration: none;
                 cursor: pointer;
 
@@ -165,14 +162,14 @@ nav {
 
         h1 {
             width: 100%;
-            font-size: 4rem;
+            font-size: 3.7rem;
             color: $blue-20;
+            font-weight: 900;
         }
 
         p {
-            font-size: 1.4rem;
-            color: $black-10;
-            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: $blue-20;
         }
     }
 }
@@ -182,7 +179,7 @@ nav {
     @include align(start, center, column, 2rem);
     width: 100%;
     height: 100vh;
-    padding: 7rem 3rem 3rem 3rem;
+    padding: 4rem 3rem 3rem 3rem;
     position: relative;
     user-select: none;
     z-index: 1;
@@ -194,8 +191,8 @@ nav {
 
         img {
             border-radius: 100%;
-            width: 100%;
-            height: 100%;
+            width: 316px;
+            height: 316px;
             box-shadow: $shadow;
         }
     }
@@ -276,7 +273,7 @@ nav {
 }
 
 // MAIN STYLE -> VALUE AND MISSION
-#value__mission-cotainer {
+#mission__cotainer {
     @include align(start, center, column, 2.5rem);
     background-color: $blue-20;
     width: 100%;
@@ -333,6 +330,7 @@ nav {
         outline: none;
         transition: 0.4s;
         cursor: pointer;
+        text-align: start;
     
         &::after {
             content: '\002B';
@@ -382,6 +380,7 @@ nav {
     h2 {
         font-size: 2.2rem;
         color: $white-10;
+        text-transform: uppercase;
     }
 
     p {
@@ -466,6 +465,7 @@ nav {
             color: $white-10;
             text-decoration: none;
             font-weight: bold;
+            text-transform: uppercase;
         }
     }
 }
@@ -479,7 +479,103 @@ nav {
 
 // RESPONSIVITY STYLE
 
-// @media ()
+@media (780px<=width<=999px) {
+    nav {
+        .nav__menu {
+            display: none;
+        }
+
+        .nav__open-mobile {
+            display: flex;
+        }
+    }
+
+    .nav__mobile-menu {
+        @include align(start, center, column, 0);
+        padding: 0 10rem;
+        display: none;
+
+        .nav__mobile-links {
+            @include align(start, center, column, 3rem);
+
+            li {
+                a {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    #why__container ,
+    #questions__container ,
+    #mission__cotainer ,
+    #contact__container ,
+    #aboutMe__container {
+        height: auto;
+    }
+
+    #aboutMe__container {
+        padding: 10rem 3rem 5rem 3rem;
+
+        .aboutMe__image {
+            img {
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+
+    #contact__container ,
+    #why__container ,
+    #mission__cotainer {
+        padding: 5rem 3rem;
+    }
+}
+
+@media (430px<=width<=779px) {
+
+    nav {
+        .nav__menu {
+            display: none;
+        }
+
+        .nav__open-mobile {
+            display: flex;
+        }
+    }
+
+    .nav__mobile-menu {
+        padding: 0 3rem;
+    }
+
+    #why__container ,
+    #questions__container ,
+    #mission__cotainer ,
+    #contact__container ,
+    #aboutMe__container {
+        height: auto;
+    }
+
+    #mission__cotainer {
+        padding: 8rem 3rem 5rem 3rem;
+    }
+
+    #aboutMe__container {
+        padding: 10rem 3rem 5rem 3rem;
+
+        .aboutMe__image {
+            img {
+                width: 316px;
+                height: 316px;
+            }
+        }
+    }
+
+    #contact__container ,
+    #why__container {
+        padding: 5rem 3rem;
+    }
+}
 
 @media (max-width: 429px) {
 
@@ -493,8 +589,42 @@ nav {
         }
     }
 
+    .nav__mobile-menu {
+        padding: 0 3rem;
+    }
+
     #why__container ,
-    #questions__container {
+    #questions__container ,
+    #contact__container ,
+    #aboutMe__container {
         height: auto;
+    }
+
+    #mission__cotainer {
+        padding: 7.5rem 3rem 3rem 3rem;
+    }
+
+    #aboutMe__container {
+        padding: 10rem 3rem 5rem 3rem;
+
+        .aboutMe__image {
+            img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+    
+    #home__container {
+        .home__content {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    #contact__container ,
+    #why__container {
+        padding: 5rem 3rem;
     }
 }

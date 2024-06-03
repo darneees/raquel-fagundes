@@ -10,7 +10,7 @@
     <!-- import css -->
     <link rel="stylesheet" href="assets/css-sass/style.css">
     <!-- import font -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" rel="stylesheet">
     <!-- title -->
     <!-- tracking code -->
     <script src="https://cdn.counter.dev/script.js" data-id="7d019666-a68f-433d-bcac-93c638d2f4fa" data-utcoffset="-3"></script>
@@ -28,7 +28,7 @@
 
             <menu class="nav__menu">
                 <li><a href="#why__container">Porque fazer terapia?</a></li>
-                <li><a href="#value__mission-cotainer">Missão e Valores</a></li>
+                <li><a href="#mission__cotainer">Missão</a></li>
                 <li><a href="#questions__container">Dúvidas</a></li>
                 <li><a href="#contact__container">Contatos</a></li>
             </menu>
@@ -54,7 +54,7 @@
                 <li><a href="#home__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon>Home</a></li>
                 <li><a href="#aboutMe__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon>Sobre mim</a></li>
                 <li><a href="#why__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Porque fazer terapia?</a></li>
-                <li><a href="#value__mission-cotainer" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Missão e Valores</a></li>
+                <li><a href="#mission__cotainer" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Missão</a></li>
                 <li><a href="#questions__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Dúvidas</a></li>
                 <li><a href="#contact__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Contato</a></li>
             </menu>
@@ -86,6 +86,7 @@
 
             <article class="aboutMe__content">
                 <p>Prazer, me chamo Raquel Fagundes. Sou psicóloga clínica e me guio pelo olhar das terapias Comportamentais Contextuais.</p>
+                <p>Acredito em uma psicologia ética e responsável. Comprometida e sensível à humanidade e disposta a te ajudar a lidar com processos complexos, como aqueles relacionados ao luto, ansiedade e autoconhecimento.</p>
                 <span>CRP: <strong>06/181741</strong></span>
             </article>
 
@@ -93,7 +94,7 @@
 
         <section id="why__container">
 
-            <h1>Porque Fazer Terapia?</h1>
+            <h1 class="why__title">Porque Fazer Terapia?</h1>
 
             <article class="why__text">
                 <p>Diversas demandas podem te trazer até a Estalo Psicologia: conflitos nos relacionamentos, sintomas físicos, estados de humor como tristeza, angústia, raiva ou até mesmo pensamentos recorrentes e dificuldades em tomadas de decisões...</p>
@@ -113,52 +114,69 @@
 
         </section>
 
-        <section id="value__mission-cotainer">
+        <section id="mission__cotainer">
 
-            <h2>Missão</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis? Sapiente quo distinctio assumenda voluptatum illum quidem ad, praesentium ipsam animi impedit nihil saepe fugiat beatae blanditiis numquam dolore odio?</p>
+            <h2 class="why__title">Missão</h2>
+            <p class="why__text">Facilitar o acesso a serviços de psicologia no Brasil, prestando atendimento seguro, baseado em ciência, de forma acessível e transparente. Além de propagar conhecimentos socialmente relevantes que favoreçam a saúde mental e facilitem o contato do público com conceitos psicológicos importantes.</p>
 
             <article class="value__mission-content">
 
                 <picture class="value__mission-image">
                     <img src="assets/image/colage__02.webp" alt="colage">
                 </picture>
-
+<!-- 
                 <h2>Valores</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio, ratione eveniet hic animi autem quis sunt eligendi exercitationem repudiandae voluptatum quam error quae enim optio. Aut pariatur veniam ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem distinctio, ratione eveniet hic animi autem quis sunt eligendi exercitationem repudiandae voluptatum quam error quae enim optio. Aut pariatur veniam ea.</p> -->
             </article>
 
         </section>
 
         <section id="questions__container">
 
-            <h1>Dúvidas</h1>
+            <h1 class="why__title">Dúvidas</h1>
 
-            <button class="accordion">Dúvida 01</button>
+            <button class="accordion">Como funcionam os atendimentos?</button>
             
             <article class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempore explicabo est cupiditate.</p>
+                <p>Após entrar em contato e escolher o melhor horário para o seu atendimento, você receberá o link para seu atendimento.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Dúvida 02</button>
+            <button class="accordion">Decidi fazer terapia. Qual é o primeiro passo?</button>
 
             <article class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempore explicabo est cupiditate.</p>
+                <p>O primeiro passo é entrar em contato e escolher um horário de sua preferência. No primeiro atendimento, abordaremos alguns assuntos importantes sobre o motivo do seu interesse pela terapia, quais são suas expectativas, informações sobre o seu dia a dia e a sua história de vida. Neste primeiro encontro, também serão combinados valores, a forma de pagamento, frequência das sessões e como proceder no caso de faltas.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Dúvida 03</button>
+            <button class="accordion">Cancelamentos e faltas</button>
 
             <article class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempore explicabo est cupiditate.</p>
+                <p>Cancelamentos devem ser comunicados dentro do período de 24 horas até a próxima sessão, não se aplicando em caso de acidentes e imprevistos de última hora. Em caso de cancelamentos, faltas e atrasos não avisados com antecedência, a sessão será cobrada normalmente.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Dúvida 04</button>
+            <button class="accordion">Qual é a frequência?</button>
 
             <article class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium tempore explicabo est cupiditate.</p>
+                <p>A frequência dos atendimentos será estipulada a partir de uma avaliação inicial, sendo recomendado, inicialmente, a frequência de uma sessão por semana.
+                </p>
+            </article>
+            <span class="line"></span>
+
+            <button class="accordion">Existem orientações para o atendimento online?</button>
+
+            <article class="panel">
+                <p>Sim. Para o atendimento remoto recomenda-se: possuir uma boa conexão de internet, baixar com antecedência o aplicativo onde será realizado o atendimento, usar fones de ouvido e escolher um local silencioso e com privacidade para os atendimentos.</p>
+            </article>
+            <span class="line"></span>
+
+            <button class="accordion">Qual é o formato?</button>
+
+            <article class="panel">
+                <p>- Inicialmente, os atendimentos ocorrerão através de videoconferência, dentro da modalidade on-line;</p>
+                <p>- O link da sessão será enviado antes do início do atendimento;</p>
+                <p>- Recomendamos que durante os atendimentos utilize fones, procure por um lugar calmo e tranquilo e desative as notificações do celular. O momento da sessão é uma fração do seu dia que você deve se dedicar única e exclusivamente a você. Por isso, evite distrações, de modo a deixar esse momento o mais imersivo possível.</p>
             </article>
 
         </section>
@@ -166,9 +184,9 @@
     </main>
 
     <footer id="contact__container">
-        <h2>Contato</h2>
+        <h2 class="why__title">Contato</h2>
 
-        <p>Em caso de dúvidas, você pode entrar em contato comigo através das redes sociais ou nos canais de atendimento.</p>
+        <p class="why__text">Em caso de dúvidas, você pode entrar em contato comigo através das redes sociais ou nos canais de atendimento.</p>
 
         <section class="contact__links">
 
@@ -194,6 +212,8 @@
     <!-- import icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- import scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- import js -->
     <script src="assets/js/script.js"></script>
 </body>

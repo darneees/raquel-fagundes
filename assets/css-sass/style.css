@@ -8,7 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5vh;
 }
 
 body {
@@ -60,9 +59,6 @@ nav .nav__menu {
   gap: 2rem;
   list-style: none;
 }
-nav .nav__menu-mobile {
-  display: none;
-}
 nav .nav__button {
   display: flex;
   align-items: center;
@@ -101,12 +97,13 @@ nav .nav__open-mobile ion-icon {
   justify-content: center;
   flex-direction: column;
   gap: 0;
+  position: fixed;
   background-color: #153c58;
   width: 100%;
   height: 100vh;
-  position: fixed;
   top: 0;
   left: 0;
+  padding: 0;
   z-index: 3;
   display: none;
 }
@@ -128,12 +125,17 @@ nav .nav__open-mobile ion-icon {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2rem;
   list-style: none;
 }
 .nav__mobile-menu .nav__mobile-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
   color: #FFFFFF;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -178,13 +180,13 @@ nav .nav__open-mobile ion-icon {
 }
 #home__container .home__content h1 {
   width: 100%;
-  font-size: 4rem;
+  font-size: 3.7rem;
   color: #153c58;
+  font-weight: 900;
 }
 #home__container .home__content p {
-  font-size: 1.4rem;
-  color: #101828;
-  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #153c58;
 }
 
 #aboutMe__container {
@@ -195,7 +197,7 @@ nav .nav__open-mobile ion-icon {
   gap: 2rem;
   width: 100%;
   height: 100vh;
-  padding: 7rem 3rem 3rem 3rem;
+  padding: 4rem 3rem 3rem 3rem;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -213,8 +215,8 @@ nav .nav__open-mobile ion-icon {
 }
 #aboutMe__container .aboutMe__image img {
   border-radius: 100%;
-  width: 100%;
-  height: 100%;
+  width: 316px;
+  height: 316px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
 }
 #aboutMe__container .aboutMe__content {
@@ -297,7 +299,7 @@ nav .nav__open-mobile ion-icon {
   display: none;
 }
 
-#value__mission-cotainer {
+#mission__cotainer {
   display: flex;
   align-items: start;
   justify-content: center;
@@ -310,11 +312,11 @@ nav .nav__open-mobile ion-icon {
   position: relative;
   z-index: 1;
 }
-#value__mission-cotainer h2 {
+#mission__cotainer h2 {
   font-size: 2.5rem;
   color: #FFFFFF;
 }
-#value__mission-cotainer p {
+#mission__cotainer p {
   width: 100%;
   font-size: 1.2rem;
   color: #FFFFFF;
@@ -322,7 +324,7 @@ nav .nav__open-mobile ion-icon {
   opacity: 0.78;
   text-indent: 0.85rem;
 }
-#value__mission-cotainer .value__mission-content .value__mission-image {
+#mission__cotainer .value__mission-content .value__mission-image {
   display: none;
 }
 
@@ -358,6 +360,7 @@ nav .nav__open-mobile ion-icon {
   outline: none;
   transition: 0.4s;
   cursor: pointer;
+  text-align: start;
 }
 #questions__container .accordion::after {
   content: "+";
@@ -406,6 +409,7 @@ nav .nav__open-mobile ion-icon {
 #contact__container h2 {
   font-size: 2.2rem;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 #contact__container p {
   font-size: 1.1rem;
@@ -500,6 +504,7 @@ nav .nav__open-mobile ion-icon {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 ::-moz-selection {
@@ -512,6 +517,84 @@ nav .nav__open-mobile ion-icon {
   color: #FFFFFF;
 }
 
+@media (780px <= width <= 999px) {
+  nav .nav__menu {
+    display: none;
+  }
+  nav .nav__open-mobile {
+    display: flex;
+  }
+  .nav__mobile-menu {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 10rem;
+    display: none;
+  }
+  .nav__mobile-menu .nav__mobile-links {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .nav__mobile-menu .nav__mobile-links li a {
+    font-size: 2rem;
+  }
+  #why__container,
+  #questions__container,
+  #mission__cotainer,
+  #contact__container,
+  #aboutMe__container {
+    height: auto;
+  }
+  #aboutMe__container {
+    padding: 10rem 3rem 5rem 3rem;
+  }
+  #aboutMe__container .aboutMe__image img {
+    width: 400px;
+    height: 400px;
+  }
+  #contact__container,
+  #why__container,
+  #mission__cotainer {
+    padding: 5rem 3rem;
+  }
+}
+@media (430px <= width <= 779px) {
+  nav .nav__menu {
+    display: none;
+  }
+  nav .nav__open-mobile {
+    display: flex;
+  }
+  .nav__mobile-menu {
+    padding: 0 3rem;
+  }
+  #why__container,
+  #questions__container,
+  #mission__cotainer,
+  #contact__container,
+  #aboutMe__container {
+    height: auto;
+  }
+  #mission__cotainer {
+    padding: 8rem 3rem 5rem 3rem;
+  }
+  #aboutMe__container {
+    padding: 10rem 3rem 5rem 3rem;
+  }
+  #aboutMe__container .aboutMe__image img {
+    width: 316px;
+    height: 316px;
+  }
+  #contact__container,
+  #why__container {
+    padding: 5rem 3rem;
+  }
+}
 @media (max-width: 429px) {
   nav .nav__menu {
     display: none;
@@ -519,8 +602,30 @@ nav .nav__open-mobile ion-icon {
   nav .nav__open-mobile {
     display: flex;
   }
+  .nav__mobile-menu {
+    padding: 0 3rem;
+  }
   #why__container,
-  #questions__container {
+  #questions__container,
+  #contact__container,
+  #aboutMe__container {
     height: auto;
+  }
+  #mission__cotainer {
+    padding: 7.5rem 3rem 3rem 3rem;
+  }
+  #aboutMe__container {
+    padding: 10rem 3rem 5rem 3rem;
+  }
+  #aboutMe__container .aboutMe__image img {
+    width: 300px;
+    height: 300px;
+  }
+  #home__container .home__content h1 {
+    font-size: 3rem;
+  }
+  #contact__container,
+  #why__container {
+    padding: 5rem 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

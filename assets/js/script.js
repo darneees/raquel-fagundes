@@ -52,3 +52,69 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// scroll reveal
+
+ScrollReveal().reveal('.aboutMe__image', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 800,
+    reset: true
+});
+
+ScrollReveal().reveal('.aboutMe__content', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});
+
+ScrollReveal().reveal('.why__title', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 800,
+    reset: true
+});
+
+ScrollReveal().reveal('.why__text', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});
+
+ScrollReveal().reveal('.why__button', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});
+
+ScrollReveal().reveal('.accordion', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1100,
+    reset: true
+});
+
+ScrollReveal().reveal('.contact__links' ,{
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});
+
+ScrollReveal().reveal('.contact__copy' ,{
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});

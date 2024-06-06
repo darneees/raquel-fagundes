@@ -197,7 +197,7 @@ nav {
     z-index: 1;
 
     .aboutMe__image {
-        @include align(center, center, row, 0);
+        @include align(center, center, column, 1.5rem);
         width: auto;
         position: relative;
 
@@ -206,6 +206,17 @@ nav {
             width: 450px;
             height: 450px;
             box-shadow: $shadow;
+        }
+
+        span {
+            font-size: 1.5rem;
+            color: $blue-20;
+            font-weight: 700;
+    
+            strong {
+                color: $red-10;
+                font-weight: 700;
+            }
         }
     }
 
@@ -218,18 +229,6 @@ nav {
             color: $blue-20;
             font-weight: 500;
             text-indent: .85rem;
-        }
-
-        span {
-            font-size: 1.8rem;
-            color: $blue-20;
-            font-weight: 700;
-
-            strong {
-                font-size: 2.4rem;
-                color: $red-10;
-                font-weight: 700;
-            }
         }
     }
 }
@@ -802,7 +801,7 @@ nav {
     }
 
     #aboutMe__container {
-        @include align(center, center, column, 5rem);
+        @include align(center, center, column, 2.2rem);
         height: auto;
         padding: 10rem 3rem 5rem 3rem;
 
@@ -906,7 +905,7 @@ nav {
     }
 
     #aboutMe__container {
-        @include align(center, center, column, 5rem);
+        @include align(center, center, column, 2.5rem);
         padding: 10rem 3rem 5rem 3rem;
         height: auto;
 

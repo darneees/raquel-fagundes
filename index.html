@@ -10,9 +10,12 @@
     <!-- Import CSS -->
     <link rel="stylesheet" href="assets/css-sass/style.min.css">
     <!-- Import Font -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap">
+    </noscript>
     <!-- Tracking Code -->
-    <script src="https://cdn.counter.dev/script.js" data-id="7d019666-a68f-433d-bcac-93c638d2f4fa" data-utcoffset="-3"></script>
+    <script src="https://cdn.counter.dev/script.js" data-id="7d019666-a68f-433d-bcac-93c638d2f4fa" data-utcoffset="-3" defer></script>
     <!-- Title -->
     <title>Raquel Fagundes</title>
 </head>
@@ -99,7 +102,7 @@
         </section>
 
         <picture id="colage__container">
-            <img src="assets/image/colagem.webp" alt="Imagem ilustrativa de uma colagem">
+            <img src="assets/image/colagem.webp" alt="Imagem ilustrativa de uma colagem" width="450px" height="450px">
         </picture>
 
         <section id="why__container" role="region" aria-labelledby="why__title">
@@ -219,6 +222,6 @@
     <!-- Import Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Import JS -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.min.js"></script>
 </body>
 </html>

@@ -7,82 +7,87 @@
     <meta name="keywords" content="Psicóloga, Psicologia, Terapia, Terapia Online, Terapia Presencial" />
     <meta name="author" content="Raquel Fagundes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- import css -->
+    <!-- Import CSS -->
     <link rel="stylesheet" href="assets/css-sass/style.css">
-    <!-- import font -->
+    <!-- Import Font -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" rel="stylesheet">
-    <!-- title -->
-    <!-- tracking code -->
+    <!-- Tracking Code -->
     <script src="https://cdn.counter.dev/script.js" data-id="7d019666-a68f-433d-bcac-93c638d2f4fa" data-utcoffset="-3"></script>
+    <!-- Title -->
     <title>Raquel Fagundes</title>
 </head>
 <body>
 
-    <button onclick="topFunction()" id="scrollTop" title="Go to top">
+    <button onclick="topFunction()" id="scrollTop" title="Ir para o topo" aria-label="Ir para o topo">
         <ion-icon name="chevron-up-outline"></ion-icon>
     </button>
 
-    <header>
+    <header role="banner">
 
-        <nav>
+        <nav role="navigation" aria-label="Menu Principal">
 
-            <menu class="nav__menu">
-                <li><a href="#aboutMe__container" rel="noopener noreferrer">Sobre mim</a></li>
-                <li><a href="#why__container" rel="noopener noreferrer">Por que fazer terapia?</a></li>
-                <li><a href="#mission__cotainer" rel="noopener noreferrer">Missão</a></li>
-                <li><a href="#questions__container" rel="noopener noreferrer">Dúvidas</a></li>
-                <li><a href="#contact__container" rel="noopener noreferrer">Contatos</a></li>
-            </menu>
+            <ul class="nav__menu" role="menu">
+                <li role="none"><a href="#aboutMe__container" rel="noopener noreferrer" role="menuitem">Sobre mim</a></li>
+                <li role="none"><a href="#why__container" rel="noopener noreferrer" role="menuitem">Por que fazer terapia?</a></li>
+                <li role="none"><a href="#mission__cotainer" rel="noopener noreferrer" role="menuitem">Missão</a></li>
+                <li role="none"><a href="#questions__container" rel="noopener noreferrer" role="menuitem">Dúvidas</a></li>
+                <li role="none"><a href="#contact__container" rel="noopener noreferrer" role="menuitem">Contatos</a></li>
+            </ul>
 
-            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" rel="noopener noreferrer" target="_blank" class="nav__button">
+            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" 
+               rel="noopener noreferrer" 
+               target="_blank" 
+               class="nav__button" 
+               title="Agende uma sessão pelo WhatsApp"
+               aria-label="Agende aqui">
                 agende aqui
                 <ion-icon name="chatbubbles-outline"></ion-icon>
             </a>
 
-            <button class="nav__open-mobile" id="open__menu">
+            <button class="nav__open-mobile" id="open__menu" aria-controls="menu__modal" aria-expanded="false" aria-label="Abrir menu">
                 <ion-icon name="reorder-three-outline"></ion-icon>
             </button>
 
         </nav>
 
-        <article class="nav__mobile-menu" id="menu__modal">
+        <div class="nav__mobile-menu" id="menu__modal" role="dialog" aria-modal="true" aria-labelledby="menu__modal">
 
-            <button class="nav__close-mobile" id="close__menu">
+            <button class="nav__close-mobile" id="close__menu" aria-label="Fechar menu">
                 <ion-icon name="close-outline"></ion-icon>
             </button>
 
-            <menu class="nav__mobile-links">
-                <li><a href="#home__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Home</a></li>
-                <li><a href="#aboutMe__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Sobre mim</a></li>
-                <li><a href="#why__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Por que fazer terapia?</a></li>
-                <li><a href="#mission__cotainer" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Missão</a></li>
-                <li><a href="#questions__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Dúvidas</a></li>
-                <li><a href="#contact__container" class="menu__link"><ion-icon name="caret-forward-outline"></ion-icon> Contato</a></li>
-            </menu>
+            <ul class="nav__mobile-links" role="menu">
+                <li role="none"><a href="#home__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Home</a></li>
+                <li role="none"><a href="#aboutMe__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Sobre mim</a></li>
+                <li role="none"><a href="#why__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Por que fazer terapia?</a></li>
+                <li role="none"><a href="#mission__cotainer" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Missão</a></li>
+                <li role="none"><a href="#questions__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Dúvidas</a></li>
+                <li role="none"><a href="#contact__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Contato</a></li>
+            </ul>
 
-        </article>
+        </div>
 
     </header>
 
     <main>
 
-        <section id="home__container">
+        <section id="home__container" role="region" aria-labelledby="home__title">
 
             <picture class="home__image">
-                <img src="assets/image/imageBrain.webp" alt="brain">
+                <img src="assets/image/imageBrain.webp" alt="Imagem de um cérebro" aria-describedby="home__title">
             </picture>
 
             <article class="home__content">
-                <h1>A terapia pode te ajudar a conhecer sua melhor versão</h1>
+                <h2>A terapia pode te ajudar a conhecer sua melhor versão</h2>
                 <p>Descubra como tornar a sua vida mais significativa!</p>
             </article>
 
         </section>
 
-        <section id="aboutMe__container">
+        <section id="aboutMe__container" role="region" aria-labelledby="aboutMe__title">
 
             <picture class="aboutMe__image">
-                <img src="assets/image/fotoPerfil.webp" alt="foto">
+                <img src="assets/image/fotoPerfil.webp" alt="Foto de Raquel Fagundes" aria-describedby="aboutMe__title">
                 <span>CRP: <strong>06/181741</strong></span>
             </picture>
 
@@ -93,9 +98,13 @@
 
         </section>
 
-        <section id="why__container">
+        <picture id="colage__container">
+            <img src="assets/image/colagem.webp" alt="Imagem ilustrativa de uma colagem">
+        </picture>
 
-            <h2 class="why__title">Por que Fazer Terapia?</h2>
+        <section id="why__container" role="region" aria-labelledby="why__title">
+
+            <h2 id="why__title" class="why__title">Por que Fazer Terapia?</h2>
 
             <article class="why__text">
                 <p>Diversas demandas podem te levar ao primeiro contato com a psicoterapia: conflitos nos relacionamentos, sintomas físicos, estados de humor como tristeza, angústia, raiva ou até mesmo pensamentos intrusivos ou dificuldades na tomada de decisões...</p>
@@ -103,72 +112,68 @@
                 <p>Muito além de lidar com sintomas e transtornos, a busca por um psicólogo é, em sua essência, a promoção de saúde mental. Caso você sinta dificuldade, esteja em sofrimento ou deseje desenvolver uma melhor compreensão de si mesmo, agende sua primeira sessão.</p>
             </article>
 
-            <!-- call to action -->
-            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" rel="noopener noreferrer" target="_blank" class="why__button">
+            <!-- Call to Action -->
+            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" 
+               rel="noopener noreferrer" 
+               target="_blank" 
+               class="why__button" 
+               title="Agende uma sessão pelo WhatsApp"
+               aria-label="Agende aqui">
                 Agende Aqui 
                 <ion-icon name="chatbubbles-outline"></ion-icon>
             </a>
 
-            <picture class="why__colage">
-                <img src="assets/image/colage__01.webp" alt="colage">
-            </picture>
-
         </section>
 
-        <section id="mission__cotainer">
+        <section id="mission__cotainer" role="region" aria-labelledby="mission__title">
 
-            <h2 class="why__title">Missão</h2>
+            <h2 id="mission__title" class="why__title">Missão</h2>
             <p class="why__text">Facilitar o acesso a serviços de psicologia no Brasil, prestando atendimento seguro, baseado em ciência, de forma acessível e transparente. Além de propagar conhecimentos socialmente relevantes que favoreçam a saúde mental e facilitem o contato do público com conceitos psicológicos importantes.</p>
 
-            <picture class="mission__image">
-                <img src="assets/image/colage__02.webp" alt="colage">
-            </picture>
-
         </section>
 
-        <section id="questions__container">
+        <section id="questions__container" role="region" aria-labelledby="questions__title">
 
-            <h2 class="why__title">Dúvidas</h2>
+            <h2 id="questions__title" class="why__title">Dúvidas</h2>
 
-            <button class="accordion">Como funcionam os atendimentos?</button>
+            <button class="accordion" aria-controls="panel1" aria-expanded="false">Como funcionam os atendimentos?</button>
             
-            <article class="panel">
+            <article class="panel" id="panel1" role="region" aria-labelledby="accordion1">
                 <p>Após entrar em contato e escolher o melhor horário do seu dia, você receberá o link para seu atendimento.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Decidi fazer terapia. Qual é o primeiro passo?</button>
+            <button class="accordion" aria-controls="panel2" aria-expanded="false">Decidi fazer terapia. Qual é o primeiro passo?</button>
 
-            <article class="panel">
+            <article class="panel" id="panel2" role="region" aria-labelledby="accordion2">
                 <p>O primeiro passo é entrar em contato e escolher um horário de sua preferência. No primeiro atendimento, abordaremos alguns assuntos importantes, como o motivo do seu interesse pela terapia, quais são suas expectativas, informações sobre o seu dia a dia e a sua história de vida. Neste primeiro encontro também serão combinados valores, a forma de pagamento, frequência das sessões e como proceder no caso de faltas.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Cancelamentos e faltas</button>
+            <button class="accordion" aria-controls="panel3" aria-expanded="false">Cancelamentos e faltas</button>
 
-            <article class="panel">
+            <article class="panel" id="panel3" role="region" aria-labelledby="accordion3">
                 <p>Cancelamentos devem ser comunicados dentro do período de 24 horas até a próxima sessão, não se aplicando em caso de acidentes e imprevistos de última hora. Em caso de cancelamentos, faltas e atrasos não avisados com antecedência, a sessão será cobrada normalmente.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Qual é a frequência?</button>
+            <button class="accordion" aria-controls="panel4" aria-expanded="false">Qual é a frequência?</button>
 
-            <article class="panel">
-                <p>A frequência dos atendimentos será estipulada a partir de uma avaliação inicial, sendo recomendado, inicialmente, a frequência de uma sessão por semana.
-                </p>
+            <article class="panel" id="panel4" role="region" aria-labelledby="accordion4">
+                <p>A frequência dos atendimentos será estipulada a partir de uma avaliação inicial, sendo recomendado, inicialmente, a frequência de uma sessão por semana.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Existem orientações para o atendimento online?</button>
+            <button class="accordion" aria-controls="panel5" aria-expanded="false">Existem orientações para o atendimento online?</button>
 
-            <article class="panel">
+            <article class="panel" id="panel5" role="region" aria-labelledby="accordion5">
                 <p>Sim. Para o atendimento remoto recomenda-se: possuir uma boa conexão de internet, baixar com antecedência o aplicativo onde será realizado o atendimento, usar fones de ouvido e escolher um local silencioso e com privacidade para os atendimentos.</p>
             </article>
             <span class="line"></span>
 
-            <button class="accordion">Qual é o formato?</button>
+            <button class="accordion" aria-controls="panel6" aria-expanded="false">Qual é o formato?</button>
 
-            <article class="panel">
+            <article class="panel" id="panel6" role="region" aria-labelledby="accordion6">
                 <p>Inicialmente, os atendimentos ocorrerão através de videoconferência, dentro da modalidade on-line. O link da sessão será enviado antes do início do atendimento.</p>
             </article>
 
@@ -176,34 +181,44 @@
 
     </main>
 
-    <footer id="contact__container">
-        <h2 class="why__title">Contato</h2>
+    <footer id="contact__container" role="contentinfo" aria-labelledby="contact__title">
+        <h2 id="contact__title" class="why__title">Contato</h2>
 
         <p class="why__text">Sua jornada para uma vida significativa começa agora.
             Marque sua primeira sessão.</p>
 
         <section class="contact__links">
 
-            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" rel="noopener noreferrer" target="_blank" class="schedule">
+            <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" 
+               rel="noopener noreferrer" 
+               target="_blank" 
+               class="schedule" 
+               title="Agende uma sessão pelo WhatsApp"
+               aria-label="Agende aqui">
                 Agende Aqui
                 <ion-icon name="chatbubbles-outline"></ion-icon>
             </a>
             
-            <a href="https://www.instagram.com/psi.colagemfcs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" rel="noopener noreferrer" target="_blank" class="instagram">
+            <a href="https://www.instagram.com/psi.colagemfcs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+               rel="noopener noreferrer" 
+               target="_blank" 
+               class="instagram" 
+               title="Visite nosso Instagram"
+               aria-label="Instagram">
                 <ion-icon name="logo-instagram"></ion-icon>
             </a>
 
         </section>
 
-        <span class="contact__copy">Copyright © Raquel fagundes 2024. Todos os direitos reservados. <br>built by <a href="https://bento.me/darneees" rel="noopener noreferrer" target="_blank" >Douglas Sa</a></span>
+        <span class="contact__copy">Copyright © Raquel fagundes 2024. Todos os direitos reservados. <br>built by <a href="https://bento.me/darneees" rel="noopener noreferrer" target="_blank">Douglas Sa</a></span>
     </footer>
     
-    <!-- import icons -->
+    <!-- Import Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- import scroll reveal -->
+    <!-- Import Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- import js -->
+    <!-- Import JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -71,6 +71,14 @@ ScrollReveal().reveal('.aboutMe__content', {
     reset: true
 });
 
+ScrollReveal().reveal('#colage__container', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 900,
+    reset: true
+});
+
 ScrollReveal().reveal('.why__title', {
     delay: 500,
     distance: '50px',

@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    @include align(center, center, column, 0);
+}
+
 body {
     background-color: $white-10;
 
@@ -43,7 +47,7 @@ nav {
     width: 100%;
     height: 12vh;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
 
     .nav__menu {
         @include align(center, start, row, 2rem);
@@ -154,7 +158,7 @@ nav {
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 1;
+    z-index: 1; 
 
     .home__image {
         @include align(center, center, row, 0);
@@ -172,7 +176,7 @@ nav {
         height: 100%;
         padding: 0 9rem;
 
-        h1 {
+        h2 {
             width: 100%;
             font-size: 4rem;
             color: $blue-20;
@@ -233,6 +237,20 @@ nav {
     }
 }
 
+// MAIN STYLE -> COLAGE
+#colage__container {    
+    @include align(center, center, row, 0);
+    width: 100%;
+    margin: 0 0 -6.5rem 0;
+    z-index: 2;
+    display: none;
+
+    img {
+        max-width: 450px;
+        max-height: 450px;
+    }
+}
+
 // MAIN STYLE -> WHY
 #why__container {
     @include align(center, center, column, 2.5rem);
@@ -278,10 +296,6 @@ nav {
             background-color: darken($red-10, 10%);
         }
     }
-
-    .why__colage {
-        display: none;
-    }
 }
 
 // MAIN STYLE -> VALUE AND MISSION
@@ -306,10 +320,6 @@ nav {
         font-weight: 300;
         opacity: .78;
         text-indent: .85rem;
-    }
-
-    .mission__image {
-        display: none;
     }
 }
 
@@ -454,15 +464,13 @@ nav {
     }
 }
 
-// SELECTION
-
+// SELECTION STYLE
 ::selection {
     background-color: $red-10;
     color: $white-10;
 }
 
 // RESPONSIVITY STYLE
-
 @media (min-width: 1200px) {
     nav {
         .nav__menu {
@@ -539,6 +547,16 @@ nav {
         }
     }
 
+    #colage__container {    
+        padding: 0;
+        display: flex;
+
+        img {
+            max-width: 400px;
+            max-height: 400px;
+        }
+    }
+
     #aboutMe__container {
         height: auto;
     }
@@ -588,7 +606,7 @@ nav {
 
     #aboutMe__container {
         @include align(center, center, column, 4.5rem);
-        padding: 10rem 3rem 5rem 3rem;
+        padding: 10rem 3rem 4rem 3rem;
 
         .aboutMe__image {
             img {
@@ -609,7 +627,7 @@ nav {
             width: 75%;
             padding: 0 3rem;
 
-            h1 {
+            h2 {
                 font-size: 3.5rem;
             }
         }
@@ -668,6 +686,16 @@ nav {
         }
     }
 
+    #colage__container {    
+        padding: 0;
+        display: flex;
+
+        img {
+            max-width: 377px;
+            max-height: 377px;
+        }
+    }
+
     #questions__container {
         height: auto;
         padding: 9rem 3rem 3rem 3rem;
@@ -699,7 +727,7 @@ nav {
 
     #aboutMe__container {
         @include align(center, center, column, 5rem);
-        padding: 10rem 3rem 5rem 3rem;
+        padding: 10rem 3rem 4rem 3rem;
         height: auto;
 
         .aboutMe__image {
@@ -721,7 +749,7 @@ nav {
             width: 100%;
             padding: 0 3rem;
 
-            h1 {
+            h2 {
                 font-size: 3.5rem;
             }
         }
@@ -774,6 +802,16 @@ nav {
         padding: 0 3rem;
     }
 
+    #colage__container {    
+        padding: 1rem;
+        display: flex;
+
+        img {
+            max-width: 333px;
+            max-height: 333px;
+        }
+    }
+
     #questions__container {
         height: auto;
     }
@@ -803,7 +841,7 @@ nav {
     #aboutMe__container {
         @include align(center, center, column, 2.2rem);
         height: auto;
-        padding: 10rem 3rem 5rem 3rem;
+        padding: 10rem 3rem 4rem 3rem;
 
         .aboutMe__image {
             img {
@@ -824,7 +862,7 @@ nav {
             width: 100%;
             padding: 0 3rem;
 
-            h1 {
+            h2 {
                 font-size: 3.5rem;
             }
         }
@@ -873,6 +911,16 @@ nav {
         }
     }
 
+    #colage__container {
+        padding: 1rem;
+        display: flex;
+
+        img {
+            max-width: 270px;
+            max-height: 270px;
+        }
+    }
+    
     .nav__mobile-menu {
         padding: 0 3rem;
     }
@@ -906,7 +954,7 @@ nav {
 
     #aboutMe__container {
         @include align(center, center, column, 2.5rem);
-        padding: 10rem 3rem 5rem 3rem;
+        padding: 10rem 3rem 4rem 3rem;
         height: auto;
 
         .aboutMe__image {
@@ -928,7 +976,7 @@ nav {
             width: 100%;
             padding: 0 3rem;
 
-            h1 {
+            h2 {
                 width: 100%;
                 font-size: 2.85rem;
                 word-wrap: break-word;

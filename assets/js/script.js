@@ -18,6 +18,25 @@ links.forEach(link => {
     });
 });
 
+// menu dropdown
+function dropdownOpen() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+}
+
+// close menu dropdown when user click outside of it
+window.onclick = function(event) {
+    if(!event.target.matches('.dropBtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for(i = 0; i < dropdowns.length; i++) {
+            var openDrown = dropdowns[i];
+            if(openDrown.classList.contains('show')) {
+                openDrown.classList.remove('show');
+            };
+        };
+    };
+};
+
 // acocordion
 document.addEventListener("DOMContentLoaded", function() {
     var acc = document.getElementsByClassName("accordion");
@@ -54,7 +73,6 @@ function topFunction() {
 }
 
 // scroll reveal
-
 ScrollReveal().reveal('.aboutMe__image', {
     delay: 500,
     distance: '50px',
@@ -88,6 +106,14 @@ ScrollReveal().reveal('.why__title', {
 });
 
 ScrollReveal().reveal('.why__text', {
+    delay: 500,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000,
+    reset: true
+});
+
+ScrollReveal().reveal('.areas__card', {
     delay: 500,
     distance: '50px',
     origin: 'left',

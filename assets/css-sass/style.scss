@@ -41,6 +41,7 @@ body {
     }
 }
 
+// MENU DESKTOP
 nav {
     @include align(center, space-around, row, 0);
     background-color: $white-10;
@@ -67,6 +68,42 @@ nav {
                 }
             }
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+            .dropBtn {
+                @include align(center, cemter, column, 0);
+                background-color: transparent;
+                color: $blue-20;
+                padding: .15rem 1rem;
+                font-size: 1.3rem;
+                border: .1rem solid $blue-20;
+                border-radius: .5rem;
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                @include align(start, center, column,1rem);
+                display: none;
+                position: absolute;
+                top: 4rem;
+                background-color: $white-10;
+                min-width: 300px;
+                padding: 2rem;
+                list-style: none;
+                overflow: auto;
+                box-shadow: $shadow-20;
+                border-radius: 0.5rem;
+                z-index: 4;
+            }
+
+            .show {
+                display: flex;
+            }
+        } 
+        
     }
 
     .nav__button {
@@ -101,15 +138,15 @@ nav {
     }
 }
 
+// MENU MOBILE
 .nav__mobile-menu {
-    @include align(center, center, column, 0);
+    @include align(center, start, column, 0);
     position: fixed;
     background-color: $blue-20;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    padding: 0;
     z-index: 3;
     display: none;
 
@@ -298,7 +335,7 @@ nav {
     }
 }
 
-// MAIN STYLE -> VALUE AND MISSION
+// MAIN STYLE -> MISSION
 #mission__cotainer {
     @include align(start, center, column, 2.5rem);
     background-color: $blue-20;
@@ -320,6 +357,86 @@ nav {
         font-weight: 300;
         opacity: .78;
         text-indent: .85rem;
+    }
+}
+
+// MAIN STYE -> WHEN
+#when__container {
+    @include align(start, start, column, 1.8rem);
+    background-color: $white-10;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 3rem 0 3rem;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        font-size: 3rem;
+        color: $blue-20;
+        margin: 3rem 0 0 0;
+    }
+
+    .why__text {
+        @include align(start, center, column, 1rem);
+
+            p {
+                font-size: 1.3rem;
+                color: $blue-20;
+                opacity: .78;
+                text-indent: .85rem;
+            }
+    }
+}
+
+// MAIN STYLE -> AREAS
+#areas__container {
+    @include align(start, start, column, 2.5rem);
+    background-color: $white-10;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 3rem 0 3rem;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        font-size: 3rem;
+        color: $blue-20;
+        margin: 3rem 0 0 0;
+    }
+
+    .areas__content {
+        @include align(center, center, row, 3rem);
+        width: 100%;
+        flex-wrap: wrap;
+
+        .areas__card {
+            @include align(start, center, column, 0);
+            max-width: 280px;
+
+            picture {
+                @include align(start, center, column, 0);
+                width: 150px;
+                height: 130px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            h3 {
+                @include align(center, center, row, 0);
+                font-size: 1.3rem;
+                color: $blue-20;
+            }
+
+            p {
+                font-size: 1.3rem;
+                color: $blue-20;
+                opacity: .78;
+                margin: 1rem 0 0 0;
+            }
+        }
     }
 }
 
@@ -503,6 +620,38 @@ nav {
             width: 80%;
         }
     }
+    
+    #when__container {
+        @include align(center, center, column, 1.8rem);
+
+        .why__text {
+            width: 70%;
+        }
+    }
+
+    #areas__container {
+        @include align(center, center, column, 4rem);
+        height: auto;
+        padding: 7.5rem 3rem 3rem 3rem;
+
+        .areas__content {
+            @include align(start, center, row, 3rem);
+            width: 65.9%;
+
+            .areas__card {
+                @include align(center, start, column, .8rem);
+
+                picture {
+                    width: auto;
+                    height: 100px;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
 
     #mission__cotainer {
         @include align(center, center, column, 2.5rem);
@@ -537,7 +686,7 @@ nav {
         padding: 0 5rem;
 
         .nav__mobile-links {
-            @include align(start, center, column, 3.5rem);
+            @include align(start, center, column, 2.5rem);
 
             li {
                 a {
@@ -559,6 +708,48 @@ nav {
 
     #aboutMe__container {
         height: auto;
+    }
+
+    #when__container {
+        @include align(center, center, column, 1.8rem);
+
+        h2 {
+            margin: 0;
+        }
+
+        .why__text {
+            width: 70%;
+        }
+    }
+
+    #areas__container {
+        @include align(center, center, column, 4rem);
+        height: auto;
+        padding: 7.5rem 3rem 3rem 3rem;
+
+        .areas__content {
+            @include align(start, center, row, 3rem);
+            width: 100%;
+
+            .areas__card {
+                @include align(center, start, column, 1rem);
+
+                picture {
+                    @include align(center, center, column, 0);
+                    width: 180px;
+                    height: 130px;
+    
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
     }
 
     #questions__container {
@@ -676,7 +867,7 @@ nav {
         padding: 0 5rem;
 
         .nav__mobile-links {
-            @include align(start, center, column, 3.5rem);
+            @include align(start, center, column, 2.5rem);
 
             li {
                 a {
@@ -689,6 +880,7 @@ nav {
     #colage__container {    
         padding: 0;
         display: flex;
+        margin: 0 0 -4.5rem 0;
 
         img {
             max-width: 377px;
@@ -696,15 +888,26 @@ nav {
         }
     }
 
-    #questions__container {
+    #questions__container ,
+    #when__container {
         height: auto;
         padding: 9rem 3rem 3rem 3rem;
     }
 
+    #areas__container {
+        height: auto;
+        padding: 9rem 3rem 3rem 3rem;
+
+        .areas__content {
+            @include align(start, center, column, 4rem);
+        }
+    }
+
+
+
     #why__container {
         @include align(start, center, column, 2.5rem);
         padding: 8rem 3rem 5rem 3rem;
-
         height: auto;
 
         .why__text {
@@ -723,6 +926,10 @@ nav {
         p {
             width: 100%;
         }
+    }
+
+    #when__container {
+        @include align(start, center, column, 1.8rem);
     }
 
     #aboutMe__container {
@@ -799,7 +1006,7 @@ nav {
     }
 
     .nav__mobile-menu {
-        padding: 0 3rem;
+        padding: 5rem 3rem 0 3rem;
     }
 
     #colage__container {    
@@ -812,7 +1019,9 @@ nav {
         }
     }
 
-    #questions__container {
+    #questions__container,
+    #when__container,
+    #areas__container {
         height: auto;
     }
 
@@ -922,10 +1131,12 @@ nav {
     }
     
     .nav__mobile-menu {
-        padding: 0 3rem;
+        padding: 5rem 3rem 0 3rem;
     }
 
-    #questions__container {
+    #questions__container ,
+    #when__container ,
+    #areas__container {
         height: auto;
     }
 

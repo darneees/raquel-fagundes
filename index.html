@@ -8,7 +8,7 @@
     <meta name="author" content="Raquel Fagundes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Import CSS -->
-    <link rel="stylesheet" href="assets/css-sass/style.min.css">
+    <link rel="stylesheet" href="assets/css-sass/style.css">
     <!-- Import Font -->
     <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -27,14 +27,25 @@
 
     <header role="banner">
 
+        <!-- MENU DESKTOP -->
         <nav role="navigation" aria-label="Menu Principal">
 
             <ul class="nav__menu" role="menu">
-                <li role="none"><a href="#aboutMe__container" rel="noopener noreferrer" role="menuitem">Sobre mim</a></li>
-                <li role="none"><a href="#why__container" rel="noopener noreferrer" role="menuitem">Por que fazer terapia?</a></li>
-                <li role="none"><a href="#mission__cotainer" rel="noopener noreferrer" role="menuitem">Missão</a></li>
-                <li role="none"><a href="#questions__container" rel="noopener noreferrer" role="menuitem">Dúvidas</a></li>
-                <li role="none"><a href="#contact__container" rel="noopener noreferrer" role="menuitem">Contatos</a></li>
+                <li role="none"><a href="#aboutMe__container" role="menuitem">Sobre mim</a></li>
+                <li role="none"><a href="#why__container" role="menuitem">Por que fazer terapia?</a></li>
+                <li role="none"><a href="#mission__cotainer" role="menuitem">Missão</a></li>
+
+                <article class="dropdown">
+                    <button onclick="dropdownOpen()" class="dropBtn">
+                       +
+                    </button>
+                    <ul id="menuDropdown" class="dropdown-content">
+                        <li role="none"><a href="#when__container" role="menuitem">Quando Procurar Ajuda?</a></li>
+                        <li role="none"><a href="#areas__container" role="menuitem">Áreas de Atuação</a></li>
+                        <li role="none"><a href="#questions__container" role="menuitem">Dúvidas</a></li>
+                        <li role="none"><a href="#contact__container" role="menuitem">Contatos</a></li>
+                    </ul>
+                </article>
             </ul>
 
             <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20" 
@@ -53,6 +64,7 @@
 
         </nav>
 
+        <!-- MENU MOBILE -->
         <div class="nav__mobile-menu" id="menu__modal" role="dialog" aria-modal="true" aria-labelledby="menu__modal">
 
             <button class="nav__close-mobile" id="close__menu" aria-label="Fechar menu">
@@ -61,9 +73,11 @@
 
             <ul class="nav__mobile-links" role="menu">
                 <li role="none"><a href="#home__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Home</a></li>
-                <li role="none"><a href="#aboutMe__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Sobre mim</a></li>
-                <li role="none"><a href="#why__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Por que fazer terapia?</a></li>
+                <li role="none"><a href="#aboutMe__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Sobre Mim</a></li>
+                <li role="none"><a href="#why__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Por que Fazer Terapia?</a></li>
                 <li role="none"><a href="#mission__cotainer" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Missão</a></li>
+                <li role="none"><a href="#when__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Quando Procurar Ajuda?</a></li>
+                <li role="none"><a href="#areas__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Áreas de Atuação</a></li>
                 <li role="none"><a href="#questions__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Dúvidas</a></li>
                 <li role="none"><a href="#contact__container" class="menu__link" role="menuitem"><ion-icon name="caret-forward-outline"></ion-icon> Contato</a></li>
             </ul>
@@ -74,6 +88,7 @@
 
     <main>
 
+        <!-- HOME -->
         <section id="home__container" role="region" aria-labelledby="home__title">
 
             <picture class="home__image">
@@ -87,6 +102,7 @@
 
         </section>
 
+        <!-- ABOUT ME -->
         <section id="aboutMe__container" role="region" aria-labelledby="aboutMe__title">
 
             <picture class="aboutMe__image">
@@ -101,10 +117,12 @@
 
         </section>
 
+        <!-- COLAGE -->
         <picture id="colage__container">
             <img src="assets/image/colagem.webp" alt="Imagem ilustrativa de uma colagem" width="450px" height="450px">
         </picture>
 
+        <!-- WHY -->
         <section id="why__container" role="region" aria-labelledby="why__title">
 
             <h2 id="why__title" class="why__title">Por que Fazer Terapia?</h2>
@@ -128,6 +146,7 @@
 
         </section>
 
+        <!-- MISSION -->
         <section id="mission__cotainer" role="region" aria-labelledby="mission__title">
 
             <h2 id="mission__title" class="why__title">Missão</h2>
@@ -135,6 +154,79 @@
 
         </section>
 
+        <!-- WHEN -->
+        <section id="when__container" role="region" aria-labelledby="when__title">
+            <h2 id="when__title" class="why__title">Quando Procurar ajuda?</h2>
+
+            <article class="why__text">
+                <p>Quem nunca ouviu dizer que todos deveriam fazer terapia? A verdade é que nunca é cedo ou tarde para buscar um profissional.</p>
+                <p>Uma das formas de avaliar se esse é o melhor caminho para você é refletir sobre como os seus problemas estão afetando o seu dia a dia. Às vezes, pode ser difícil buscar ajuda, mas é importante lembrar que você não precisa enfrentar os desafios sozinho.</p>
+                <p>Caso esteja com muita dificuldade, este pode ser um ponto de atenção para procurar apoio especializado. O processo terapêutico não traz nenhuma fórmula mágica, mas visa te capacitar para lidar melhor com seus desafios com autonomia.</p>
+            </article>
+        </section>
+
+        <!-- AREAS -->
+        <section id="areas__container" role="region" aria-labelledby="area__title">
+            <h2 id="area__title" class="why__title">Áreas de Atuação</h2>
+
+            <section class="areas__content">
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/relacionamento.webp" alt="image">
+                    </picture>
+
+                    <h3>Relacionamento</h3>
+                    <p class="why__text">Identificação de fatores que influenciam suas relações, além de auxílio para lidar com os impactos do sofrimento causado pela separação conjugal.</p>
+                </article>
+
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/autoestima.webp" alt="image">
+                    </picture>
+
+                    <h3>Autoestima</h3>
+                    <p>Escuta direcionada e propostas para entrar em contato com a sua melhor versão.</p>
+                </article>
+
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/autoconhecimento.webp" alt="image">
+                    </picture>
+
+                    <h3>Autoconhecimento</h3>
+                    <p>Reflexões sobre aspectos significativos da sua vida e como eles impactam suas relações e rotina.</p>
+                </article>
+
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/luto.webp" alt="image">
+                    </picture>
+
+                    <h3>Luto</h3>
+                    <p>Auxílio para compreender os impactos do luto em seus diferentes formatos.</p>
+                </article>
+
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/transtorno_de_ansiedade.webp" alt="image">
+                    </picture>
+
+                    <h3>Transtorno de Ansiedade</h3>
+                    <p>Escuta ativa e utilização de técnicas para avaliar e te ajudar a lidar melhor com a ansiedade em diferentes contextos.</p>
+                </article>
+
+                <article class="areas__card">
+                    <picture>
+                        <img src="assets/image/areas/regulacao_emocional.webp" alt="image">
+                    </picture>
+
+                    <h3>Regulação Emocional</h3>
+                    <p>Psicoeducação sobre emoções e desenvolvimento de habilidades para compreender e lidar com as próprias reações emocionais.</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- QUESTIONS -->
         <section id="questions__container" role="region" aria-labelledby="questions__title">
 
             <h2 id="questions__title" class="why__title">Dúvidas</h2>
@@ -184,6 +276,7 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer id="contact__container" role="contentinfo" aria-labelledby="contact__title">
         <h2 id="contact__title" class="why__title">Contato</h2>
 
@@ -222,6 +315,6 @@
     <!-- Import Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Import JS -->
-    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

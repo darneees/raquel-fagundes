@@ -1091,6 +1091,13 @@ nav .nav__open-mobile ion-icon {
   #areas__container {
     height: auto;
   }
+  #areas__container .areas__content {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 3rem;
+  }
   #why__container {
     display: flex;
     align-items: start;

@@ -1025,6 +1025,12 @@ nav {
         height: auto;
     }
 
+    #areas__container {
+        .areas__content {
+            @include align(start, start, column, 3rem);
+        }
+    }
+
     #why__container {
         @include align(start, center, column, 2.5rem);
         height: auto;

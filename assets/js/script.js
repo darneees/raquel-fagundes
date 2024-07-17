@@ -152,3 +152,14 @@ ScrollReveal().reveal('.contact__copy' ,{
     duration: 1000,
     reset: true
 });
+
+// toast animation
+document.addEventListener("DOMContentLoaded", function() {
+    var toast = document.getElementById("toast");
+
+    toast.classList.add("show");
+
+    setTimeout(function() {
+        toast.classList.remove("show");
+    }, 4500);
+});

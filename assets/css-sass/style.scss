@@ -39,7 +39,51 @@ body {
             color: $white-10;
         }
     }
+
+    // available
+    .toast {
+        @include align(center, start, row, 1rem);
+        visibility: hidden;
+        background-color: #FFFFFF;
+        color: #5caa69; 
+        // color: #8D2728 ( descomentar quando a agenda estiver fechada )
+        min-width: 200px;
+        border-radius: .7rem;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        z-index: 1;
+        left: 2rem;
+        bottom: 30px;
+        font-size: 1.15rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, bottom 0.5s ease, transform 0.5s ease;
+        box-shadow: $shadow;
+        user-select: none;
+        z-index: 3;
+    
+        ion-icon {
+            @include align(flex, center, center, 0);
+            background-color: #5caa69;
+            // background-color: #8D2728 ( descomentar quando a agenda estiver fechada )
+            color: #FFFFFF;
+            width: 2.5rem;
+            padding: .6rem 0;
+            font-size: 1.4rem;
+            border-radius: .3rem;
+        }
+    
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+            transform: translateY(0);
+        }
+    }
 }
+
+
 
 // MENU DESKTOP
 nav {

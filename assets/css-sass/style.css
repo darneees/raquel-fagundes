@@ -46,6 +46,52 @@ body #scrollTop ion-icon {
   font-size: 1.5rem;
   color: #FFFFFF;
 }
+body .toast {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  gap: 1rem;
+  visibility: hidden;
+  background-color: #FFFFFF;
+  color: #5caa69;
+  min-width: 200px;
+  border-radius: 0.7rem;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1;
+  left: 2rem;
+  bottom: 30px;
+  font-size: 1.15rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, bottom 0.5s ease, transform 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 3;
+}
+body .toast ion-icon {
+  display: flex;
+  align-items: flex;
+  justify-content: center;
+  flex-direction: center;
+  gap: 0;
+  background-color: #5caa69;
+  color: #FFFFFF;
+  width: 2.5rem;
+  padding: 0.6rem 0;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+}
+body .toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+  transform: translateY(0);
+}
 
 nav {
   display: flex;

@@ -8,7 +8,7 @@
     <meta name="author" content="Raquel Fagundes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Import CSS -->
-    <link rel="stylesheet" href="assets/css-sass/style.css">
+    <link rel="stylesheet" href="assets/css-sass/style.min.css">
     <!-- Import Font -->
     <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -20,6 +20,16 @@
     <title>Raquel Fagundes</title>
 </head>
 <body>
+
+    <!-- mensagem de alerta ( agenda aberta/fechada )-->
+    <article id="toast" class="toast">
+        <ion-icon name="lock-open-outline"></ion-icon>
+        <!-- 
+            <ion-icon name="lock-closed-outline"></ion-icon> 
+            ICONE DE AGENDA FECHADA 
+        -->
+        Agenda aberta!
+    </article>
 
     <button onclick="topFunction()" id="scrollTop" title="Ir para o topo" aria-label="Ir para o topo">
         <ion-icon name="chevron-up-outline"></ion-icon>
@@ -315,6 +325,6 @@
     <!-- Import Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Import JS -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.min.js"></script>
 </body>
 </html>

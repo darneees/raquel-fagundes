@@ -74,82 +74,82 @@ function topFunction() {
 
 // scroll reveal
 ScrollReveal().reveal('.aboutMe__image', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 800,
+    duration: 750,
     reset: true
 });
 
 ScrollReveal().reveal('.aboutMe__content', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 
 ScrollReveal().reveal('#colage__container', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
+    duration: 850,
     reset: true
 });
 
 ScrollReveal().reveal('.why__title', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 800,
+    duration: 750,
     reset: true
 });
 
 ScrollReveal().reveal('.why__text', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 
 ScrollReveal().reveal('.areas__card', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 
 ScrollReveal().reveal('.why__button', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 
 ScrollReveal().reveal('.accordion', {
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1100,
+    duration: 1050,
     reset: true
 });
 
 ScrollReveal().reveal('.contact__links' ,{
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 
 ScrollReveal().reveal('.contact__copy' ,{
-    delay: 500,
+    delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
+    duration: 950,
     reset: true
 });
 

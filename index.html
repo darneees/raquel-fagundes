@@ -8,7 +8,7 @@
     <meta name="author" content="Raquel Fagundes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Import CSS -->
-    <link rel="stylesheet" href="assets/css-sass/style.min.css">
+    <link rel="stylesheet" href="assets/css-sass/style.css">
     <!-- Import Font -->
     <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -182,7 +182,7 @@
             <section class="areas__content">
                 <article class="areas__card">
                     <picture>
-                        <img src="assets/image/areas/relacionamento.webp" alt="image">
+                        <img src="assets/image/areas/relacionamento.webp" class="lazyload" alt="image">
                     </picture>
 
                     <h3>Relacionamento</h3>
@@ -191,7 +191,7 @@
 
                 <article class="areas__card">
                     <picture>
-                        <img src="assets/image/areas/autoestima.webp" alt="image">
+                        <img src="assets/image/areas/autoestima.webp" class="lazyload" alt="image">
                     </picture>
 
                     <h3>Autoestima</h3>
@@ -200,7 +200,7 @@
 
                 <article class="areas__card">
                     <picture>
-                        <img src="assets/image/areas/autoconhecimento.webp" alt="image">
+                        <img src="assets/image/areas/autoconhecimento.webp" class="lazyload" alt="image">
                     </picture>
 
                     <h3>Autoconhecimento</h3>
@@ -324,6 +324,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Import Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- lazysizes -->
+    <script src="lazysizes.min.js" async></script>
     <!-- Import JS -->
     <script src="assets/js/script.min.js"></script>
 </body>

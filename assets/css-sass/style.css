@@ -221,7 +221,7 @@ nav .nav__open-mobile ion-icon {
   cursor: pointer;
   position: absolute;
   top: 2rem;
-  right: 3.5rem;
+  right: 3rem;
 }
 .nav__mobile-menu .nav__close-mobile ion-icon {
   font-size: 3.4rem;
@@ -245,6 +245,9 @@ nav .nav__open-mobile ion-icon {
   font-size: 1.7rem;
   text-decoration: none;
   cursor: pointer;
+}
+.nav__mobile-menu .nav__mobile-links li a ion-icon {
+  opacity: 0.3;
 }
 .nav__mobile-menu .nav__mobile-links li a:hover {
   color: #a6a6a6;
@@ -331,6 +334,9 @@ nav .nav__open-mobile ion-icon {
   font-size: 1.5rem;
   color: #153c58;
   font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 #aboutMe__container .aboutMe__image span strong {
   color: #8D2728;
@@ -1240,12 +1246,27 @@ nav .nav__open-mobile ion-icon {
     max-height: 270px;
   }
   .nav__mobile-menu {
-    padding: 5rem 3rem 0 3rem;
+    padding: 4.5rem 3rem 0 3rem;
+  }
+  .nav__mobile-menu .nav__mobile-links {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  .nav__mobile-menu .nav__mobile-links li a {
+    font-size: 1.55rem;
   }
   #questions__container,
-  #when__container,
-  #areas__container {
+  #areas__container,
+  #when__container {
     height: auto;
+  }
+  #questions__container h2,
+  #areas__container h2,
+  #when__container h2 {
+    font-size: 2.5rem;
   }
   #why__container {
     display: flex;
@@ -1256,6 +1277,9 @@ nav .nav__open-mobile ion-icon {
     padding: 5rem 3rem;
     height: auto;
   }
+  #why__container h2 {
+    font-size: 2.5rem;
+  }
   #why__container .why__text {
     width: 100%;
   }
@@ -1264,6 +1288,9 @@ nav .nav__open-mobile ion-icon {
   }
   #mission__cotainer {
     padding: 7.5rem 3rem 3rem 3rem;
+  }
+  #mission__cotainer h2 {
+    font-size: 2.5rem;
   }
   #mission__cotainer p {
     width: 100%;

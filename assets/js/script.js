@@ -77,7 +77,7 @@ ScrollReveal().reveal('.aboutMe__image', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 750,
+    duration: 700,
     reset: true
 });
 
@@ -85,7 +85,7 @@ ScrollReveal().reveal('.aboutMe__content', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 
@@ -93,7 +93,7 @@ ScrollReveal().reveal('#colage__container', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 850,
+    duration: 800,
     reset: true
 });
 
@@ -101,7 +101,7 @@ ScrollReveal().reveal('.why__title', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 750,
+    duration: 700,
     reset: true
 });
 
@@ -109,7 +109,7 @@ ScrollReveal().reveal('.why__text', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 
@@ -117,7 +117,7 @@ ScrollReveal().reveal('.areas__card', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 
@@ -125,7 +125,7 @@ ScrollReveal().reveal('.why__button', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 
@@ -133,7 +133,7 @@ ScrollReveal().reveal('.accordion', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1050,
+    duration: 1000,
     reset: true
 });
 
@@ -141,7 +141,7 @@ ScrollReveal().reveal('.contact__links' ,{
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 
@@ -149,7 +149,7 @@ ScrollReveal().reveal('.contact__copy' ,{
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 950,
+    duration: 900,
     reset: true
 });
 

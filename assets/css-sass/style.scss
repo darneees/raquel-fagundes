@@ -201,7 +201,7 @@ nav {
         cursor: pointer;
         position: absolute;
         top: 2rem;
-        right: 3.5rem;
+        right: 3rem;
 
         ion-icon {
             font-size: 3.4rem;
@@ -220,6 +220,10 @@ nav {
                 font-size: 1.7rem;
                 text-decoration: none;
                 cursor: pointer;
+
+                ion-icon {
+                    opacity: .3;
+                }
 
                 &:hover {
                     color: darken($white-10, 35%);
@@ -297,6 +301,7 @@ nav {
             font-size: 1.5rem;
             color: $blue-20;
             font-weight: 700;
+            user-select: none;
     
             strong {
                 color: $red-10;
@@ -1181,20 +1186,37 @@ nav {
     }
     
     .nav__mobile-menu {
-        padding: 5rem 3rem 0 3rem;
+        padding: 4.5rem 3rem 0 3rem;
+
+        .nav__mobile-links {
+            @include align(start, center, column, 1.8rem);
+
+            li {
+                a {
+                    font-size: 1.55rem;
+                }
+            }
+        }
     }
 
     #questions__container ,
-    #when__container ,
-    #areas__container {
+    #areas__container ,
+    #when__container {
         height: auto;
+
+        h2 {
+            font-size: 2.5rem;
+        }
     }
 
     #why__container {
         @include align(start, center, column, 2.5rem);
         padding: 5rem 3rem;
-
         height: auto;
+
+        h2 {
+            font-size: 2.5rem;
+        }
 
         .why__text {
             width: 100%;
@@ -1207,6 +1229,10 @@ nav {
 
     #mission__cotainer {
         padding: 7.5rem 3rem 3rem 3rem;
+
+        h2 {
+            font-size: 2.5rem;
+        }
 
         p {
             width: 100%;

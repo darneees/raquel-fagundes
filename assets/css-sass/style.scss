@@ -3,7 +3,7 @@
 
 * {
     @include reset();
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Supreme', sans-serif;
 }
 
 html {
@@ -17,6 +17,16 @@ main {
 body {
     background-color: $white-10;
     position: relative;
+
+    .overlay {
+        background-color: $overlay;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 4;
+        display: none;
+    }
 
     #scrollTop {
         @include align(center, center, column, 0);
@@ -100,6 +110,225 @@ body {
             }
         }
     }
+
+    #success-popup {
+        @include align(start, center, column, 1rem);
+        position: fixed;
+        top: 3rem;
+        left: 40% !important;
+        background-color: $black-50;
+        width: 22%;
+        height: 25rem;
+        padding: 2rem 3rem 2rem 3rem;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        z-index: 5;
+        display: none;
+
+        .message-image {
+            @include align(center, center, column, 0);
+            width: 100%;
+            font-size: 3rem;
+            color: $red-500;
+        }
+
+        .message-content {
+            @include align(center, center, column, 1rem);
+            width: 100%;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 700;
+                color: $black-900;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: 300;
+                color: $black-900;
+                opacity: .7;
+            }
+        }
+
+        .message-back-button {
+            @include align(center, center, column, 0);
+            width: 50%;
+            height: 3rem;
+            background-color: $blue-500;
+            color: $black-50;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: .5rem;
+            cursor: pointer;
+            outline: none;
+            transition: .3s;
+
+            &:hover {
+                background-color: $blue-600;
+            }
+        }
+
+        &.flex {
+            display: flex;
+        }
+    }
+
+    #section-form {
+        @include align(start, center, column, 2rem);
+        position: fixed;
+        top: 3rem;
+        left: 35% !important;
+        background-color: $black-50;
+        width: 30%;
+        height: 90%;
+        padding: 30rem 2rem 3rem 2rem;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        z-index: 5;
+        overflow-y: scroll;
+        display: none;
+
+        #close-form {
+            @include align(end, center, row, 0);
+            position: absolute;
+            right: 2rem;
+            top: 1rem;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            border: none;
+
+            i {
+                font-size: 2.2rem;
+                color: $red-300;
+            }
+        }
+
+        .banner-form {
+            width: 100%;
+            user-select: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: .5rem;
+            }
+        }
+
+        h2 {
+            @include align(center, center, row, .5rem);
+            height: 20%;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $black-900;
+            user-select: none;
+
+            i {
+                font-size: 1.5rem;
+                color: $red-500;
+                margin-right: .5rem;
+            }
+        }
+
+        .greeting-form {
+            user-select: none;
+
+            p {
+                color: $black-500;
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+        }
+    
+        .form-content {
+            @include align(center, center, column, 2rem);
+            width: 100%;
+            max-height: 4700px;
+            padding: 2rem 0 0 0;
+
+            label {
+                @include align(start, center, column, .55rem);
+                width: 100%;
+
+                p {
+                    color: $black-500;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+
+                    span {
+                        color: $red-300;
+                    }
+                }
+
+                input {
+                    @include align(center, column, center, 0);
+                    width: 100%;
+                    border: .1rem solid $blue-100;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    border-radius: .5rem;
+                    font-weight: 300;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $black-500;
+                        opacity: .7;
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                    }
+                }
+
+                textarea {
+                    @include align(center, column, center, 0);
+                    width: 100%;
+                    height: 7rem;
+                    border: .1rem solid $blue-100;
+                    color: $black-900;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    border-radius: .5rem;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $black-500;
+                        opacity: .7;
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            button {
+                @include align(center, center, row, .5rem);
+                width: 100%;
+                height: 3rem;
+                background-color: $red-300;
+                color: $black-50;
+                font-size: 1.1rem;
+                font-weight: 500;
+                border: none;
+                border-radius: .5rem;
+                cursor: pointer;
+                outline: none;
+                transition: .3s;
+
+                &:hover {
+                    background-color: $red-500;
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: .2rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $red-500;
+            border-radius: .5rem;
+        }
+    }
 }
 
 
@@ -171,19 +400,20 @@ nav {
 
     .nav__button {
         @include align(center, center, row, .5rem);
-        background-color: $red-10;
-        color: $white-10;
-        padding: .8rem 2.5rem;
-        border-radius: 0.5rem;
-        font-size: 1.15rem;
-        box-shadow: $shadow;
-        text-transform: uppercase;
+        min-width: 12rem;
+        height: 3.3rem;
+        background-color: $red-300;
+        color: $black-50;
+        font-size: 1.2rem;
+        font-weight: 500;
         border: none;
+        border-radius: .5rem;
         cursor: pointer;
-        text-decoration: none;
+        outline: none;
+        transition: .3s;
     
         &:hover {
-            background-color: darken($red-10, 10%);
+            background-color: $red-500;
         }
     }
 
@@ -738,6 +968,22 @@ nav {
 }
 
 @media (1000px<=width<=1199px) {
+
+    body {
+        #success-popup {
+            top: 15%;
+            left: 18% !important;
+            min-width: 65%;
+            height: 25rem;
+        }
+
+        #section-form {
+            left: 22% !important;
+            min-width: 50%;
+            padding: 30rem 2rem 3rem 2rem;
+        }
+    }
+
     nav {
         .nav__menu {
             display: flex;
@@ -919,6 +1165,22 @@ nav {
 }
 
 @media (780px<=width<=999px) {
+
+    body {
+        #success-popup {
+            top: 15%;
+            left: 18% !important;
+            min-width: 65%;
+            height: 25rem;
+        }
+
+        #section-form {
+            left: 18% !important;
+            min-width: 65%;
+            padding: 33rem 2rem 3rem 2rem;
+        }
+    }
+
     nav {
         .nav__menu {
             display: none;
@@ -1067,6 +1329,19 @@ nav {
         .icon-whatsapp {
             display: flex;
         }
+
+        #success-popup {
+            top: 15%;
+            left: 5% !important;
+            min-width: 90%;
+            height: 25rem;
+        }
+
+        #section-form {
+            left: 5% !important;
+            min-width: 90%;
+            padding: 33rem 2rem 3rem 2rem;
+        }
     }
 
     nav {
@@ -1193,6 +1468,20 @@ nav {
     body {
         .icon-whatsapp {
             display: flex;
+        }
+
+        #success-popup {
+            top: 15%;
+            left: 5% !important;
+            min-width: 90%;
+            height: 25rem;
+        }
+
+        #section-form {
+            top: 2rem;
+            left: 5% !important;
+            min-width: 90%;
+            padding: 40rem 2rem 3rem 2rem;
         }
     }
 
@@ -1329,6 +1618,15 @@ nav {
             .instagram {
                 width: 100%;
             }
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    body {
+        #section-form {
+            top: 2rem;
+            padding: 39rem 2rem 3rem 2rem;
         }
     }
 }

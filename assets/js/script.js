@@ -163,3 +163,92 @@ document.addEventListener("DOMContentLoaded", function() {
         toast.classList.remove("show");
     }, 4500);
 });
+
+// mask phone number
+document.getElementById('phone').addEventListener('input', function (e) {
+    var telefone = e.target.value.replace(/\D/g, '');
+    var telefoneFormatado = '';
+
+    if (telefone.length > 0) {
+        telefoneFormatado = '(' + telefone.substring(0, 2);
+    }
+    if (telefone.length >= 3) {
+        telefoneFormatado += ') ' + telefone.substring(2, 7);
+    }
+    if (telefone.length >= 8) {
+        telefoneFormatado += '-' + telefone.substring(7, 11);
+    }
+    e.target.value = telefoneFormatado;
+});
+
+// reset form
+function reset() {
+    const form = document.getElementById('contactForm');
+    form.reset();
+
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+}
+
+// API Formspree
+document.getElementById('section-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    const formData = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+    };
+
+    fetch('https://formspree.io/f/mrbgzgbj', { // endpoint
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(function (response) {
+        if (response.ok) {
+            const successPopup = document.getElementById('success-popup');
+
+            successPopup.style.display = 'flex';
+            document.getElementById('overlay').style.display = 'flex';
+            document.getElementById('section-form').style.display = 'none';
+
+            setTimeout(function () {
+                successPopup.style.display = 'none';
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('open-form').style.display = 'flex';
+            }, 3000);
+
+            reset();
+
+        } else {
+            console.error('Erro ao enviar o formulário');
+        }
+    })
+    .catch(function (error) {
+        console.error('Erro na solicitação:', error);
+    });
+});
+
+//  event button - open
+document.getElementById('open-form').addEventListener('click', function() {
+    document.getElementById('section-form').style.display = 'flex';
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('body').style.overflow = 'hidden';
+});
+// event button - close
+document.getElementById('close-form').addEventListener('click', function() {
+    document.getElementById('section-form').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('body').style.overflow = 'visible';
+});

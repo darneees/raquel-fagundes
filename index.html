@@ -10,15 +10,18 @@
         <link rel="shortcut icon" href="assets/image/favicon.ico"
             type="image/x-icon">
         <!-- Import CSS -->
-        <link rel="stylesheet" href="assets/css-sass/style.min.css">
+        <link rel="stylesheet" href="assets/css-sass/style.css">
         <!-- Import Font -->
         <link rel="preload"
-            href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap"
+            href="https://api.fontshare.com/v2/css?f[]=supreme@300,500,700,800&display=swap"
             as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet"
                 href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700;900&display=swap">
         </noscript>
+        <!-- import icon -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
         <!-- Title -->
         <title>Psicóloga Clínica | Raquel Fagundes</title>
 
@@ -51,9 +54,12 @@
           }
     </script> -->
     </head>
-    <body>
+    <body id="body">
 
-        <!-- mensagem de alerta ( agenda aberta/fechada )-->
+        <!-- overlay -->
+        <div id="overlay" class="overlay"></div>
+
+        <!-- mensagem toast ( agenda aberta/fechada )-->
         <article id="toast" class="toast">
             <ion-icon name="lock-open-outline"></ion-icon>
             <!-- 
@@ -63,7 +69,9 @@
             Agenda aberta!
         </article>
 
-        <a href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20"
+        <!-- icone do whatsapp -->
+        <a
+            href="https://api.whatsapp.com/send?phone=5511975718469&text=Oi,%20gostaria%20de%20marcar%20uma%20sess%C3%A3o%20"
             rel="noopener noreferrer"
             target="_blank" class="icon-whatsapp">
             <picture>
@@ -73,13 +81,79 @@
             </picture>
         </a>
 
+        <!-- botão de ir para o topo -->
         <button onclick="topFunction()" id="scrollTop" title="Ir para o topo"
             aria-label="Ir para o topo">
             <ion-icon name="chevron-up-outline"></ion-icon>
         </button>
 
-        <header role="banner">
+        <!-- mensagem de confirmação do formulario -->
+        <article id="success-popup">
+            <picture class="message-image">
+                <i class="iconoir-double-check"></i>
+            </picture>
 
+            <article class="message-content">
+                <h2>Agendamento confirmado!</h2>
+                <p>Em breve, responderei sua mensagem para que possamos
+                    conversar mais sobre como posso te ajudar. Até logo!</p>
+            </article>
+        </article>
+
+        <!-- formulario -->
+        <section id="section-form">
+
+            <button id="close-form">
+                <i class="iconoir-xmark-square"></i>
+            </button>
+
+            <picture class="banner-form">
+                <img src="assets/image/banner.webp" alt="image">
+            </picture>
+
+            <h2>
+                Agendamento
+                <i class="iconoir-edit-pencil"></i>
+            </h2>
+
+            <article class="greeting-form">
+                <p>Que bom que chegou aqui. :) <br>Sinta-se acolhido, você
+                    acaba de dar o primeiro passo em busca de uma vida que
+                    faz sentido. Este formulário é destinado às pessoas que
+                    desejam receber atendimento psicológico on-line. </p>
+            </article>
+
+            <form id="contactForm" class="form-content">
+                <label for="name">
+                    <p>Nome completo:<span>*</span></p>
+                    <input type="text" id="name" name="name"
+                        placeholder="Nome" autocomplete="off" required>
+                </label>
+                <label for="email">
+                    <p>Email<span>*</span></p>
+                    <input type="email" id="email" name="email"
+                        placeholder="email@gmail.com" autocomplete="off" required>
+                </label>
+                <label for="phone">
+                    <p>Telefone de contato com DDD ou
+                        WhatsApp:<span>*</span></p>
+                    <input type="tel" maxlength="15" id="phone" name="phone"
+                        placeholder="(00) 91234-5678" autocomplete="off" required>
+                </label>
+                <label for="message">
+                    <p>Descreva pontualmente sua disponibilidade para
+                        realizar os atendimentos (dias da semana e horários).<span>*</span></p>
+                    <textarea name="message" id="message" autocomplete="off"
+                        placeholder="ex.: segunda-feira, às 18H"></textarea>
+                </label>
+                <button type="submit">
+                    Enviar
+                    <i class="iconoir-send-diagonal"></i>
+                </button>
+            </form>
+        </section>
+
+        <header role="banner">
             <!-- MENU DESKTOP -->
             <nav role="navigation" aria-label="Menu Principal">
 
@@ -109,15 +183,10 @@
                     </article>
                 </ul>
 
-                <a href="https://forms.gle/YErKw15Xit8RVdpQ7"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    class="nav__button"
-                    title="Agende uma sessão pelo WhatsApp"
-                    aria-label="Agende aqui">
-                    agende aqui
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
-                </a>
+                <button type="submit" id="open-form" class="nav__button">
+                    Agende aqui
+                    <i class="iconoir-chat-bubble"></i>
+                </button>
 
                 <button class="nav__open-mobile" id="open__menu"
                     aria-controls="menu__modal" aria-expanded="false"
@@ -170,9 +239,7 @@
                                 name="caret-forward-outline"></ion-icon>
                             Contato</a></li>
                 </ul>
-
             </div>
-
         </header>
 
         <main>

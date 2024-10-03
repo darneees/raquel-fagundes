@@ -192,8 +192,8 @@ body {
         #close-form {
             @include align(end, center, row, 0);
             position: absolute;
-            right: 2rem;
-            top: 1rem;
+            right: .5rem;
+            top: .5rem;
             background-color: transparent;
             cursor: pointer;
             outline: none;
@@ -244,7 +244,7 @@ body {
         .form-content {
             @include align(center, center, column, 2rem);
             width: 100%;
-            max-height: 4700px;
+            max-height: 5000px;
             padding: 2rem 0 0 0;
 
             label {
@@ -615,20 +615,22 @@ nav {
         }
     }
 
-    .why__button {
+    .nav__button {
         @include align(center, center, row, .5rem);
-        background-color: $red-10;
-        color: $white-10;
-        padding: 1rem 3rem;
-        border-radius: 0.5rem;
-        font-size: 1.3rem;
-        box-shadow: $shadow;
+        min-width: 12rem;
+        height: 3.3rem;
+        background-color: $red-300;
+        color: $black-50;
+        font-size: 1.2rem;
+        font-weight: 500;
         border: none;
+        border-radius: .5rem;
         cursor: pointer;
-        text-decoration: none;
+        outline: none;
+        transition: .3s;
     
         &:hover {
-            background-color: darken($red-10, 10%);
+            background-color: $red-500;
         }
     }
 }
@@ -827,7 +829,7 @@ nav {
         @include align(center, start, row, 2rem);
         width: 100%;
 
-        .schedule {
+        .nav__button {
             @include align(center, center, row, 1rem);
             background-color: $blue-20;
             color: $white-10;
@@ -1094,7 +1096,7 @@ nav {
             width: 70%;
         }
 
-        .why__button {
+        .nav__button {
             padding: .8rem 3rem;
         }
     }
@@ -1153,7 +1155,7 @@ nav {
         .contact__links {
             @include align(center, start, row, 2rem);
 
-            .schedule {
+            .nav__button {
                 width: 40%;
             }
 
@@ -1244,7 +1246,7 @@ nav {
             width: 100%;
         }
 
-        .why__button {
+        .nav__button {
             padding: .8rem 3rem;
         }
     }
@@ -1312,7 +1314,7 @@ nav {
         .contact__links {
             @include align(center, start, row, 2rem);
 
-            .schedule {
+            .nav__button {
                 width: 40%;
             }
 
@@ -1340,7 +1342,8 @@ nav {
         #section-form {
             left: 5% !important;
             min-width: 90%;
-            padding: 33rem 2rem 3rem 2rem;
+            height: 50%;
+            padding: 38rem 2rem 5rem 2rem;
         }
     }
 
@@ -1389,7 +1392,7 @@ nav {
             width: 100%;
         }
 
-        .why__button {
+        .nav__button {
             padding: .8rem 3rem;
         }
     }
@@ -1452,7 +1455,7 @@ nav {
         .contact__links {
             @include align(center, center, column, 1.5rem);
 
-            .schedule {
+            .nav__button {
                 width: 100%;
             }
 
@@ -1478,10 +1481,11 @@ nav {
         }
 
         #section-form {
-            top: 2rem;
+            top: 1rem;
             left: 5% !important;
             min-width: 90%;
-            padding: 40rem 2rem 3rem 2rem;
+            height: 50%;
+            padding: 38rem 2rem 5rem 2rem;
         }
     }
 
@@ -1542,7 +1546,7 @@ nav {
             width: 100%;
         }
 
-        .why__button {
+        .nav__button {
             padding: .8rem 3rem;
         }
     }
@@ -1611,7 +1615,7 @@ nav {
         .contact__links {
             @include align(center, center, column, 1.5rem);
 
-            .schedule {
+            .nav__button {
                 width: 100%;
             }
 
@@ -1625,8 +1629,10 @@ nav {
 @media (max-width: 399px) {
     body {
         #section-form {
-            top: 2rem;
-            padding: 39rem 2rem 3rem 2rem;
+            top: 1rem;
+            min-width: 90%;
+            height: 50%;
+            padding: 38rem 2rem 5rem 2rem;
         }
     }
 }

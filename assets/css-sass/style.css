@@ -39,7 +39,7 @@ body #scrollTop {
   flex-direction: column;
   gap: 0;
   background-color: #101828;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   height: 3rem;
   width: 3rem;
   border-radius: 10rem;
@@ -78,7 +78,7 @@ body .toast {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease, bottom 0.5s ease, transform 0.5s ease;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -111,7 +111,7 @@ body .icon-whatsapp {
   bottom: 2rem;
   z-index: 3;
   display: none;
-  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(rgba(0, 0, 0, 0.3) 0 5px 20px);
 }
 body .icon-whatsapp picture img {
   width: 100%;
@@ -131,7 +131,7 @@ body #success-popup {
   height: 25rem;
   padding: 2rem 3rem 2rem 3rem;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   z-index: 5;
   display: none;
 }
@@ -202,7 +202,7 @@ body #section-form {
   height: 90%;
   padding: 30rem 2rem 3rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   z-index: 5;
   overflow-y: scroll;
   display: none;
@@ -214,8 +214,8 @@ body #section-form #close-form {
   flex-direction: row;
   gap: 0;
   position: absolute;
-  right: 2rem;
-  top: 1rem;
+  right: 0.5rem;
+  top: 0.5rem;
   background-color: transparent;
   cursor: pointer;
   outline: none;
@@ -272,7 +272,7 @@ body #section-form .form-content {
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-height: 4700px;
+  max-height: 5000px;
   padding: 2rem 0 0 0;
 }
 body #section-form .form-content label {
@@ -610,7 +610,7 @@ nav .nav__open-mobile ion-icon {
   border-radius: 100%;
   width: 450px;
   height: 450px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
 }
 #aboutMe__container .aboutMe__image span {
   font-size: 1.5rem;
@@ -688,24 +688,26 @@ nav .nav__open-mobile ion-icon {
   opacity: 0.78;
   text-indent: 0.85rem;
 }
-#why__container .why__button {
+#why__container .nav__button {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 0.5rem;
-  background-color: #8D2728;
-  color: #FFFFFF;
-  padding: 1rem 3rem;
-  border-radius: 0.5rem;
-  font-size: 1.3rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  min-width: 12rem;
+  height: 3.3rem;
+  background-color: #8d2728;
+  color: #FDFDFD;
+  font-size: 1.2rem;
+  font-weight: 500;
   border: none;
+  border-radius: 0.5rem;
   cursor: pointer;
-  text-decoration: none;
+  outline: none;
+  transition: 0.3s;
 }
-#why__container .why__button:hover {
-  background-color: #651c1d;
+#why__container .nav__button:hover {
+  background-color: #691b1d;
 }
 
 #mission__cotainer {
@@ -926,7 +928,7 @@ nav .nav__open-mobile ion-icon {
   gap: 2rem;
   width: 100%;
 }
-#contact__container .contact__links .schedule {
+#contact__container .contact__links .nav__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -938,12 +940,12 @@ nav .nav__open-mobile ion-icon {
   height: 3.5rem;
   border-radius: 0.5rem;
   font-size: 1.3rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   border: none;
   cursor: pointer;
   text-decoration: none;
 }
-#contact__container .contact__links .schedule:hover {
+#contact__container .contact__links .nav__button:hover {
   background-color: #0b202f;
 }
 #contact__container .contact__links .instagram {
@@ -958,7 +960,7 @@ nav .nav__open-mobile ion-icon {
   height: 3.5rem;
   border-radius: 0.5rem;
   font-size: 1.3rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -1205,7 +1207,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .why__text {
     width: 70%;
   }
-  #why__container .why__button {
+  #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
   #mission__cotainer {
@@ -1267,7 +1269,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: row;
     gap: 2rem;
   }
-  #contact__container .contact__links .schedule {
+  #contact__container .contact__links .nav__button {
     width: 40%;
   }
   #contact__container .contact__links .instagram {
@@ -1348,7 +1350,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .why__text {
     width: 100%;
   }
-  #why__container .why__button {
+  #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
   #mission__cotainer {
@@ -1417,7 +1419,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: row;
     gap: 2rem;
   }
-  #contact__container .contact__links .schedule {
+  #contact__container .contact__links .nav__button {
     width: 40%;
   }
   #contact__container .contact__links .instagram {
@@ -1437,7 +1439,8 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     left: 5% !important;
     min-width: 90%;
-    padding: 33rem 2rem 3rem 2rem;
+    height: 50%;
+    padding: 38rem 2rem 5rem 2rem;
   }
   nav .nav__menu {
     display: none;
@@ -1480,7 +1483,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .why__text {
     width: 100%;
   }
-  #why__container .why__button {
+  #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
   #mission__cotainer {
@@ -1541,7 +1544,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: column;
     gap: 1.5rem;
   }
-  #contact__container .contact__links .schedule {
+  #contact__container .contact__links .nav__button {
     width: 100%;
   }
   #contact__container .contact__links .instagram {
@@ -1559,10 +1562,11 @@ nav .nav__open-mobile ion-icon {
     height: 25rem;
   }
   body #section-form {
-    top: 2rem;
+    top: 1rem;
     left: 5% !important;
     min-width: 90%;
-    padding: 40rem 2rem 3rem 2rem;
+    height: 50%;
+    padding: 38rem 2rem 5rem 2rem;
   }
   nav .nav__menu {
     display: none;
@@ -1616,7 +1620,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .why__text {
     width: 100%;
   }
-  #why__container .why__button {
+  #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
   #mission__cotainer {
@@ -1682,7 +1686,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: column;
     gap: 1.5rem;
   }
-  #contact__container .contact__links .schedule {
+  #contact__container .contact__links .nav__button {
     width: 100%;
   }
   #contact__container .contact__links .instagram {
@@ -1691,7 +1695,9 @@ nav .nav__open-mobile ion-icon {
 }
 @media (max-width: 399px) {
   body #section-form {
-    top: 2rem;
-    padding: 39rem 2rem 3rem 2rem;
+    top: 1rem;
+    min-width: 90%;
+    height: 50%;
+    padding: 38rem 2rem 5rem 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

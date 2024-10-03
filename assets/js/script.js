@@ -121,7 +121,7 @@ ScrollReveal().reveal('.areas__card', {
     reset: true
 });
 
-ScrollReveal().reveal('.why__button', {
+ScrollReveal().reveal('.nav__button', {
     delay: 400,
     distance: '50px',
     origin: 'left',
@@ -241,10 +241,12 @@ document.getElementById('section-form').addEventListener('submit', function (eve
 });
 
 //  event button - open
-document.getElementById('open-form').addEventListener('click', function() {
-    document.getElementById('section-form').style.display = 'flex';
-    document.getElementById('overlay').style.display = 'flex';
-    document.getElementById('body').style.overflow = 'hidden';
+document.querySelectorAll('.nav__button').forEach(button => {
+    button.addEventListener('click', function() {
+        document.getElementById('section-form').style.display = 'flex';
+        document.getElementById('overlay').style.display = 'flex';
+        document.getElementById('body').style.overflow = 'hidden';
+    });
 });
 // event button - close
 document.getElementById('close-form').addEventListener('click', function() {

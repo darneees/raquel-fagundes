@@ -121,7 +121,7 @@ ScrollReveal().reveal('.areas__card', {
     reset: true
 });
 
-ScrollReveal().reveal('.nav__button', {
+ScrollReveal().reveal('.why__form', {
     delay: 400,
     distance: '50px',
     origin: 'left',

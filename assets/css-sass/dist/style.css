@@ -24,8 +24,7 @@ body {
 }
 body .overlay {
   background-color: rgba(0, 0, 0, 0.481);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -79,9 +78,7 @@ body .toast {
   transform: translateY(50px);
   transition: opacity 0.5s ease, bottom 0.5s ease, transform 0.5s ease;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   z-index: 3;
 }
 body .toast ion-icon {
@@ -227,9 +224,7 @@ body #section-form #close-form i {
 }
 body #section-form .banner-form {
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 body #section-form .banner-form img {
   width: 100%;
@@ -246,9 +241,7 @@ body #section-form h2 {
   font-size: 1.8rem;
   font-weight: 700;
   color: #1B1B1B;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 body #section-form h2 i {
   font-size: 1.5rem;
@@ -256,9 +249,7 @@ body #section-form h2 i {
   margin-right: 0.5rem;
 }
 body #section-form .greeting-form {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 body #section-form .greeting-form p {
   color: #6D6D6D;
@@ -305,12 +296,6 @@ body #section-form .form-content label input {
   font-weight: 300;
   outline: none;
 }
-body #section-form .form-content label input::-moz-placeholder {
-  color: #6D6D6D;
-  opacity: 0.7;
-  font-size: 1.1rem;
-  font-weight: 300;
-}
 body #section-form .form-content label input::placeholder {
   color: #6D6D6D;
   opacity: 0.7;
@@ -335,12 +320,6 @@ body #section-form .form-content label textarea {
   font-weight: 300;
   border-radius: 0.5rem;
   outline: none;
-}
-body #section-form .form-content label textarea::-moz-placeholder {
-  color: #6D6D6D;
-  opacity: 0.7;
-  font-size: 1.1rem;
-  font-weight: 300;
 }
 body #section-form .form-content label textarea::placeholder {
   color: #6D6D6D;
@@ -623,9 +602,7 @@ nav .nav__open-mobile ion-icon {
   height: 100vh;
   padding: 10rem 9rem 5rem 9rem;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   z-index: 1;
 }
 #aboutMe__container .aboutMe__image {
@@ -647,9 +624,7 @@ nav .nav__open-mobile ion-icon {
   font-size: 1.5rem;
   color: #153c58;
   font-weight: 700;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 #aboutMe__container .aboutMe__image span strong {
   color: #8D2728;
@@ -937,9 +912,7 @@ nav .nav__open-mobile ion-icon {
   padding: 0 3rem;
   position: relative;
   z-index: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 #contact__container h2 {
   font-size: 3rem;
@@ -1011,11 +984,6 @@ nav .nav__open-mobile ion-icon {
   font-weight: bold;
 }
 
-::-moz-selection {
-  background-color: #8D2728;
-  color: #FFFFFF;
-}
-
 ::selection {
   background-color: #8D2728;
   color: #FFFFFF;
@@ -1028,9 +996,11 @@ nav .nav__open-mobile ion-icon {
   nav .nav__open-mobile {
     display: none;
   }
+
   .nav__mobile-menu {
     display: none;
   }
+
   #questions__container {
     display: flex;
     align-items: center;
@@ -1049,6 +1019,7 @@ nav .nav__open-mobile ion-icon {
   #questions__container .panel {
     width: 80%;
   }
+
   #when__container {
     display: flex;
     align-items: center;
@@ -1059,6 +1030,7 @@ nav .nav__open-mobile ion-icon {
   #when__container .why__text {
     width: 70%;
   }
+
   #areas__container {
     display: flex;
     align-items: center;
@@ -1090,6 +1062,7 @@ nav .nav__open-mobile ion-icon {
   #areas__container .areas__content .areas__card p {
     text-align: center;
   }
+
   #mission__cotainer {
     display: flex;
     align-items: center;
@@ -1099,6 +1072,7 @@ nav .nav__open-mobile ion-icon {
     padding: 5rem 9rem;
     height: 60vh;
   }
+
   #contact__container {
     padding: 5rem 17rem;
     height: auto;
@@ -1119,12 +1093,14 @@ nav .nav__open-mobile ion-icon {
     min-width: 50%;
     padding: 35rem 2rem 3rem 2rem;
   }
+
   nav .nav__menu {
     display: flex;
   }
   nav .nav__open-mobile {
     display: none;
   }
+
   .nav__mobile-menu {
     display: flex;
     align-items: start;
@@ -1144,6 +1120,7 @@ nav .nav__open-mobile ion-icon {
   .nav__mobile-menu .nav__mobile-links li a {
     font-size: 2rem;
   }
+
   #colage__container {
     padding: 0;
     display: flex;
@@ -1152,9 +1129,11 @@ nav .nav__open-mobile ion-icon {
     max-width: 400px;
     max-height: 400px;
   }
+
   #aboutMe__container {
     height: auto;
   }
+
   #when__container {
     display: flex;
     align-items: center;
@@ -1168,6 +1147,7 @@ nav .nav__open-mobile ion-icon {
   #when__container .why__text {
     width: 70%;
   }
+
   #areas__container {
     display: flex;
     align-items: center;
@@ -1208,6 +1188,7 @@ nav .nav__open-mobile ion-icon {
   #areas__container .areas__content .areas__card p {
     text-align: center;
   }
+
   #questions__container {
     display: flex;
     align-items: center;
@@ -1226,6 +1207,7 @@ nav .nav__open-mobile ion-icon {
   #questions__container .panel {
     width: 70%;
   }
+
   #why__container {
     display: flex;
     align-items: center;
@@ -1241,6 +1223,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
+
   #mission__cotainer {
     display: flex;
     align-items: center;
@@ -1253,6 +1236,7 @@ nav .nav__open-mobile ion-icon {
   #mission__cotainer .why__text {
     width: 70%;
   }
+
   #aboutMe__container {
     display: flex;
     align-items: center;
@@ -1268,6 +1252,7 @@ nav .nav__open-mobile ion-icon {
   #aboutMe__container .aboutMe__content {
     width: 71%;
   }
+
   #home__container {
     display: flex;
     align-items: center;
@@ -1289,6 +1274,7 @@ nav .nav__open-mobile ion-icon {
     width: 50%;
     opacity: 0.35;
   }
+
   #contact__container {
     padding: 5rem 11rem;
     height: auto;
@@ -1319,12 +1305,14 @@ nav .nav__open-mobile ion-icon {
     min-width: 65%;
     padding: 36rem 2rem 3rem 2rem;
   }
+
   nav .nav__menu {
     display: none;
   }
   nav .nav__open-mobile {
     display: flex;
   }
+
   .nav__mobile-menu {
     display: flex;
     align-items: start;
@@ -1344,6 +1332,7 @@ nav .nav__open-mobile ion-icon {
   .nav__mobile-menu .nav__mobile-links li a {
     font-size: 1.7rem;
   }
+
   #colage__container {
     padding: 0;
     display: flex;
@@ -1353,11 +1342,13 @@ nav .nav__open-mobile ion-icon {
     max-width: 377px;
     max-height: 377px;
   }
+
   #questions__container,
-  #when__container {
+#when__container {
     height: auto;
     padding: 9rem 3rem 3rem 3rem;
   }
+
   #areas__container {
     height: auto;
     padding: 9rem 3rem 3rem 3rem;
@@ -1369,6 +1360,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: column;
     gap: 4rem;
   }
+
   #why__container {
     display: flex;
     align-items: start;
@@ -1384,6 +1376,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
+
   #mission__cotainer {
     padding: 7.5rem 3rem 3rem 3rem;
     height: 55vh;
@@ -1391,6 +1384,7 @@ nav .nav__open-mobile ion-icon {
   #mission__cotainer p {
     width: 100%;
   }
+
   #when__container {
     display: flex;
     align-items: start;
@@ -1398,6 +1392,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: column;
     gap: 1.8rem;
   }
+
   #aboutMe__container {
     display: flex;
     align-items: center;
@@ -1414,6 +1409,7 @@ nav .nav__open-mobile ion-icon {
   #aboutMe__container .aboutMe__content {
     width: 100%;
   }
+
   #home__container {
     display: flex;
     align-items: center;
@@ -1439,6 +1435,7 @@ nav .nav__open-mobile ion-icon {
     width: 100%;
     height: 100%;
   }
+
   #contact__container {
     height: auto;
     padding: 5rem 3rem;
@@ -1473,15 +1470,18 @@ nav .nav__open-mobile ion-icon {
     height: 50%;
     padding: 42rem 2rem 5rem 2rem;
   }
+
   nav .nav__menu {
     display: none;
   }
   nav .nav__open-mobile {
     display: flex;
   }
+
   .nav__mobile-menu {
     padding: 5rem 3rem 0 3rem;
   }
+
   #colage__container {
     padding: 1rem;
     display: flex;
@@ -1490,11 +1490,13 @@ nav .nav__open-mobile ion-icon {
     max-width: 333px;
     max-height: 333px;
   }
+
   #questions__container,
-  #when__container,
-  #areas__container {
+#when__container,
+#areas__container {
     height: auto;
   }
+
   #areas__container .areas__content {
     display: flex;
     align-items: start;
@@ -1502,6 +1504,7 @@ nav .nav__open-mobile ion-icon {
     flex-direction: column;
     gap: 3rem;
   }
+
   #why__container {
     display: flex;
     align-items: start;
@@ -1517,12 +1520,14 @@ nav .nav__open-mobile ion-icon {
   #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
+
   #mission__cotainer {
     padding: 7.5rem 3rem 3rem 3rem;
   }
   #mission__cotainer p {
     width: 100%;
   }
+
   #aboutMe__container {
     display: flex;
     align-items: center;
@@ -1539,6 +1544,7 @@ nav .nav__open-mobile ion-icon {
   #aboutMe__container .aboutMe__content {
     width: 100%;
   }
+
   #home__container {
     display: flex;
     align-items: center;
@@ -1564,6 +1570,7 @@ nav .nav__open-mobile ion-icon {
     width: 100%;
     height: 100%;
   }
+
   #contact__container {
     padding: 5rem 3rem;
     height: auto;
@@ -1599,12 +1606,14 @@ nav .nav__open-mobile ion-icon {
     height: 50%;
     padding: 42rem 2rem 5rem 2rem;
   }
+
   nav .nav__menu {
     display: none;
   }
   nav .nav__open-mobile {
     display: flex;
   }
+
   #colage__container {
     padding: 1rem;
     display: flex;
@@ -1613,6 +1622,7 @@ nav .nav__open-mobile ion-icon {
     max-width: 270px;
     max-height: 270px;
   }
+
   .nav__mobile-menu {
     padding: 4.5rem 3rem 0 3rem;
   }
@@ -1626,16 +1636,18 @@ nav .nav__open-mobile ion-icon {
   .nav__mobile-menu .nav__mobile-links li a {
     font-size: 1.55rem;
   }
+
   #questions__container,
-  #areas__container,
-  #when__container {
+#areas__container,
+#when__container {
     height: auto;
   }
   #questions__container h2,
-  #areas__container h2,
-  #when__container h2 {
+#areas__container h2,
+#when__container h2 {
     font-size: 2.5rem;
   }
+
   #why__container {
     display: flex;
     align-items: start;
@@ -1654,6 +1666,7 @@ nav .nav__open-mobile ion-icon {
   #why__container .nav__button {
     padding: 0.8rem 3rem;
   }
+
   #mission__cotainer {
     padding: 7.5rem 3rem 3rem 3rem;
   }
@@ -1663,6 +1676,7 @@ nav .nav__open-mobile ion-icon {
   #mission__cotainer p {
     width: 100%;
   }
+
   #aboutMe__container {
     display: flex;
     align-items: center;
@@ -1679,6 +1693,7 @@ nav .nav__open-mobile ion-icon {
   #aboutMe__container .aboutMe__content {
     width: 100%;
   }
+
   #home__container {
     display: flex;
     align-items: center;
@@ -1706,6 +1721,7 @@ nav .nav__open-mobile ion-icon {
     width: 100%;
     height: 100%;
   }
+
   #contact__container {
     height: auto;
     padding: 5rem 3rem;
@@ -1731,4 +1747,4 @@ nav .nav__open-mobile ion-icon {
     height: 50%;
     padding: 42rem 2rem 5rem 2rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}

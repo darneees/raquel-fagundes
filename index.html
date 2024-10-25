@@ -140,11 +140,20 @@
                     <input type="tel" maxlength="15" id="phone" name="phone"
                         placeholder="(00) 91234-5678" autocomplete="off" required>
                 </label>
+                <label for="value">
+                    <p>Selecione o valor:<span>*</span></p>
+                    <select name="valor" id="value" required>
+                        <option value="" disabled selected>Escolha uma opção:</option>
+                        <option value="R$ 150/s">Pacote 1 - R$ 150/semanal</option>
+                        <option value="R$ 450/m">Pacote 2 - R$ 400/mensal</option>
+                        <option value="R$ 500/m">Pacote 3 - R$ 500/mensal</option>
+                    </select>
+                </label>
                 <label for="message">
                     <p>Descreva pontualmente sua disponibilidade para
                         realizar os atendimentos (dias da semana e horários).<span>*</span></p>
                     <textarea name="message" id="message" autocomplete="off"
-                        placeholder="ex.: segunda-feira, às 18H"></textarea>
+                        placeholder="ex.: segunda-feira, às 18H" required></textarea>
                 </label>
                 <button type="submit">
                     Enviar
@@ -564,12 +573,12 @@
         <script async
             src="https://www.googletagmanager.com/gtag/js?id=G-NW87FKQGFV"></script>
         <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
     
-      gtag('config', 'G-NW87FKQGFV');
-    </script>
+            gtag('config', 'G-NW87FKQGFV');
+        </script>
 
         <!-- Import Icons -->
         <script type="module"

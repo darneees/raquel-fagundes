@@ -51,7 +51,7 @@ function topFunction() {
 
 function reset() {
   var e = document.getElementById("contactForm");
-  e.reset(), document.getElementById("name").value = "", document.getElementById("email").value = "", document.getElementById("phone").value = "", document.getElementById("message").value = "";
+  e.reset(), document.getElementById("name").value = "", document.getElementById("email").value = "", document.getElementById("phone").value = "", document.getElementById("value").value = "", document.getElementById("message").value = "";
 }
 
 window.onscroll = function () {
@@ -130,7 +130,8 @@ window.onscroll = function () {
   var t = document.getElementById("name").value,
       n = document.getElementById("email").value,
       l = document.getElementById("phone").value,
-      o = document.getElementById("message").value;
+      o = document.getElementById("value").value,
+      a = document.getElementById("message").value;
   fetch("https://formspree.io/f/mrbgzgbj", {
     method: "POST",
     headers: {
@@ -140,7 +141,8 @@ window.onscroll = function () {
       name: t,
       email: n,
       phone: l,
-      message: o
+      value: o,
+      message: a
     })
   }).then(function (e) {
     if (e.ok) {

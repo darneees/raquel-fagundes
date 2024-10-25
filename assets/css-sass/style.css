@@ -199,7 +199,7 @@ body #section-form {
   left: 35% !important;
   background-color: #FDFDFD;
   width: 35%;
-  height: 90%;
+  height: 95%;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   z-index: 5;
@@ -1607,8 +1607,11 @@ nav .nav__open-mobile ion-icon {
     top: 1rem;
     left: 5% !important;
     min-width: 90%;
-    height: 90%;
+    height: 95%;
     padding: 4rem 2.5rem;
+  }
+  body #section-form .banner-form {
+    padding: 40rem 0 0 0;
   }
   nav .nav__menu {
     display: none;
@@ -1739,8 +1742,11 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     top: 1rem;
     min-width: 90%;
-    height: 90%;
+    height: 95%;
     padding: 4rem 2.5rem;
     overflow-x: hidden;
+  }
+  body #section-form .banner-form {
+    padding: 47rem 0 0 0;
   }
 }/*# sourceMappingURL=style.css.map */

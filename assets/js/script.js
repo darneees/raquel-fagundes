@@ -211,7 +211,7 @@ document.getElementById('section-form').addEventListener('submit', function (eve
         message: message
     };
 
-    fetch('https://formspree.io/f/xqakzkrn', { // endpoint
+    fetch('https://formspree.io/f/mrbgzgbj', { // endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

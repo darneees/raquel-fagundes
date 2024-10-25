@@ -181,7 +181,7 @@ body {
         left: 35% !important;
         background-color: $black-50;
         width: 35%;
-        height: 90%;
+        height: 95%;
         border-radius: 1rem;
         box-shadow: $shadow;
         z-index: 5;
@@ -1529,8 +1529,12 @@ nav {
             top: 1rem;
             left: 5% !important;
             min-width: 90%;
-            height: 90%;
+            height: 95%;
             padding: 4rem 2.5rem;
+
+            .banner-form {
+                padding: 40rem 0 0 0;
+            }
         }
     }
 
@@ -1676,9 +1680,13 @@ nav {
         #section-form {
             top: 1rem;
             min-width: 90%;
-            height: 90%;
+            height: 95%;
             padding: 4rem 2.5rem;
             overflow-x: hidden;
+
+            .banner-form {
+                padding: 47rem 0 0 0;
+            }
         }
     }
 }

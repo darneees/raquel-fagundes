@@ -195,17 +195,17 @@ body #section-form {
   flex-direction: column;
   gap: 2rem;
   position: fixed;
-  top: 3rem;
+  top: 1.5rem;
   left: 35% !important;
   background-color: #FDFDFD;
-  width: 30%;
+  width: 35%;
   height: 90%;
-  padding: 35rem 2rem 3rem 2rem;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
   z-index: 5;
   overflow-y: scroll;
   display: none;
+  padding: 4rem 2.5rem;
 }
 body #section-form #close-form {
   display: flex;
@@ -230,6 +230,7 @@ body #section-form .banner-form {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  padding: 44rem 0 0 0;
 }
 body #section-form .banner-form img {
   width: 100%;
@@ -1117,7 +1118,11 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     left: 22% !important;
     min-width: 50%;
-    padding: 35rem 2rem 3rem 2rem;
+    padding: 4rem 2.5rem;
+    top: 1.5rem;
+  }
+  body #section-form .banner-form {
+    padding: 44rem 0 0 0;
   }
   nav .nav__menu {
     display: flex;
@@ -1317,7 +1322,12 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     left: 18% !important;
     min-width: 65%;
-    padding: 36rem 2rem 3rem 2rem;
+    height: 90%;
+    padding: 4rem 2.5rem;
+    top: 1.5rem;
+  }
+  body #section-form .banner-form {
+    padding: 44rem 0 0 0;
   }
   nav .nav__menu {
     display: none;
@@ -1470,8 +1480,9 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     left: 5% !important;
     min-width: 90%;
-    height: 50%;
-    padding: 42rem 2rem 5rem 2rem;
+    height: 90%;
+    padding: 4rem 2.5rem;
+    top: 1.5rem;
   }
   nav .nav__menu {
     display: none;
@@ -1596,8 +1607,8 @@ nav .nav__open-mobile ion-icon {
     top: 1rem;
     left: 5% !important;
     min-width: 90%;
-    height: 50%;
-    padding: 42rem 2rem 5rem 2rem;
+    height: 90%;
+    padding: 4rem 2.5rem;
   }
   nav .nav__menu {
     display: none;
@@ -1728,7 +1739,8 @@ nav .nav__open-mobile ion-icon {
   body #section-form {
     top: 1rem;
     min-width: 90%;
-    height: 50%;
-    padding: 42rem 2rem 5rem 2rem;
+    height: 90%;
+    padding: 4rem 2.5rem;
+    overflow-x: hidden;
   }
 }/*# sourceMappingURL=style.css.map */

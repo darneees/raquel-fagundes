@@ -205,7 +205,7 @@ document.getElementById('section-form').addEventListener('submit', function (eve
     value: value,
     message: message
   };
-  fetch('https://formspree.io/f/mrbgzgbj', {
+  fetch('https://formspree.io/f/xqakzkrn', {
     // endpoint
     method: 'POST',
     headers: {

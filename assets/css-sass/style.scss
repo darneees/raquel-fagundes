@@ -177,17 +177,17 @@ body {
     #section-form {
         @include align(start, center, column, 2rem);
         position: fixed;
-        top: 3rem;
+        top: 1.5rem;
         left: 35% !important;
         background-color: $black-50;
-        width: 30%;
+        width: 35%;
         height: 90%;
-        padding: 35rem 2rem 3rem 2rem;
         border-radius: 1rem;
         box-shadow: $shadow;
         z-index: 5;
         overflow-y: scroll;
         display: none;
+        padding: 4rem 2.5rem;
 
         #close-form {
             @include align(end, center, row, 0);
@@ -208,6 +208,7 @@ body {
         .banner-form {
             width: 100%;
             user-select: none;
+            padding: 44rem 0 0 0;
 
             img {
                 width: 100%;
@@ -1014,7 +1015,12 @@ nav {
         #section-form {
             left: 22% !important;
             min-width: 50%;
-            padding: 35rem 2rem 3rem 2rem;
+            padding: 4rem 2.5rem;
+            top: 1.5rem;
+
+            .banner-form {
+                padding: 44rem 0 0 0;
+            }
         }
     }
 
@@ -1211,7 +1217,13 @@ nav {
         #section-form {
             left: 18% !important;
             min-width: 65%;
-            padding: 36rem 2rem 3rem 2rem;
+            height: 90%;
+            padding: 4rem 2.5rem;
+            top: 1.5rem;
+
+            .banner-form {
+                padding: 44rem 0 0 0;
+            }
         }
     }
 
@@ -1374,8 +1386,9 @@ nav {
         #section-form {
             left: 5% !important;
             min-width: 90%;
-            height: 50%;
-            padding: 42rem 2rem 5rem 2rem;
+            height: 90%;
+            padding: 4rem 2.5rem;
+            top: 1.5rem;
         }
     }
 
@@ -1516,8 +1529,8 @@ nav {
             top: 1rem;
             left: 5% !important;
             min-width: 90%;
-            height: 50%;
-            padding: 42rem 2rem 5rem 2rem;
+            height: 90%;
+            padding: 4rem 2.5rem;
         }
     }
 
@@ -1663,8 +1676,9 @@ nav {
         #section-form {
             top: 1rem;
             min-width: 90%;
-            height: 50%;
-            padding: 42rem 2rem 5rem 2rem;
+            height: 90%;
+            padding: 4rem 2.5rem;
+            overflow-x: hidden;
         }
     }
 }

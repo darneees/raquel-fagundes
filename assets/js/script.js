@@ -77,80 +77,70 @@ ScrollReveal().reveal('.aboutMe__image', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 700,
-    reset: true
+    duration: 700
 });
 
 ScrollReveal().reveal('.aboutMe__content', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 ScrollReveal().reveal('#colage__container', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 800,
-    reset: true
+    duration: 800
 });
 
 ScrollReveal().reveal('.why__title', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 700,
-    reset: true
+    duration: 700
 });
 
 ScrollReveal().reveal('.why__text', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 ScrollReveal().reveal('.areas__card', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 ScrollReveal().reveal('.why__form', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 ScrollReveal().reveal('.accordion', {
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 1000,
-    reset: true
+    duration: 1000
 });
 
 ScrollReveal().reveal('.contact__links' ,{
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 ScrollReveal().reveal('.contact__copy' ,{
     delay: 400,
     distance: '50px',
     origin: 'left',
-    duration: 900,
-    reset: true
+    duration: 900
 });
 
 // toast animation
@@ -256,4 +246,38 @@ document.getElementById('close-form').addEventListener('click', function() {
     document.getElementById('section-form').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('body').style.overflow = 'visible';
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sectionNames = {
+        "home__container": "home",
+        "aboutMe__container": "sobre-mim",
+        "why__container": "por-que-fazer-terapia",
+        "mission__cotainer": "missao",
+        "when__container": "quando-procurar-ajuda",
+        "areas__container": "areas-de-atuacao",
+        "questions__container": "duvidas",
+        "contact__container": "contato"
+    };
+
+    const anchorLinks = document.querySelectorAll("a[href^='#']");
+
+    anchorLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+                
+                const newUrl = "/" + sectionNames[targetId];
+                window.history.pushState(null, "", newUrl);
+            }
+        });
+    });
 });

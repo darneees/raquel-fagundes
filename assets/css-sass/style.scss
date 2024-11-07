@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 12vh;
 }
 
 main {
@@ -39,7 +40,7 @@ body {
         outline: none;
         position: fixed;
         bottom: 6.5rem;
-        right: 1.5rem;
+        right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
         display: none;
@@ -93,8 +94,8 @@ body {
     }
 
     .icon-whatsapp {
-        height: 60px;
-        width: 60px;
+        height: 3.2rem;
+        width: 3.2rem;
         position: fixed;
         right: 1rem;
         bottom: 2rem;
@@ -369,7 +370,7 @@ body {
 // MENU DESKTOP
 nav {
     @include align(center, space-around, row, 0);
-    background-color: $white-10;
+    background-color: $blue-20;
     width: 100%;
     height: 12vh;
     position: fixed;
@@ -382,7 +383,7 @@ nav {
         li {
             a {
                 @include align(center, center, row, .5rem);
-                color: $blue-20;
+                color: $black-50;
                 font-size: 1.3rem;
                 font-weight: 500;
                 text-decoration: none;
@@ -401,10 +402,10 @@ nav {
             .dropBtn {
                 @include align(center, cemter, column, 0);
                 background-color: transparent;
-                color: $blue-20;
+                color: $black-50;
                 padding: .15rem 1rem;
                 font-size: 1.3rem;
-                border: .1rem solid $blue-20;
+                border: .15rem solid $black-50;
                 border-radius: .5rem;
                 cursor: pointer;
             }
@@ -413,8 +414,8 @@ nav {
                 @include align(start, center, column,1rem);
                 display: none;
                 position: absolute;
-                top: 4rem;
-                background-color: $white-10;
+                top: 5rem;
+                background-color: $blue-20;
                 min-width: 300px;
                 padding: 2rem;
                 list-style: none;
@@ -459,7 +460,7 @@ nav {
     
         ion-icon {
             font-size: 2.6rem;
-            color: $blue-20;
+            color: $black-50;
         }
     }
 }
@@ -598,24 +599,10 @@ nav {
 
         p {
             font-size: 1.3rem;
-            color: $blue-20;
-            font-weight: 500;
+            color: $black-500;
+            font-weight: 400;
             text-indent: .85rem;
         }
-    }
-}
-
-// MAIN STYLE -> COLAGE
-#colage__container {    
-    @include align(center, center, row, 0);
-    width: 100%;
-    margin: 0 0 -6.5rem 0;
-    z-index: 2;
-    display: none;
-
-    img {
-        max-width: 450px;
-        max-height: 450px;
     }
 }
 
@@ -624,8 +611,8 @@ nav {
     @include align(center, center, column, 2.5rem);
     background-color: $blue-20;
     width: 100%;
-    height: 100vh;
-    padding: 5rem 9rem;
+    height: 70vh;
+    padding: 3rem;
     position: relative;
     z-index: 1;
 
@@ -698,7 +685,7 @@ nav {
     @include align(start, start, column, 1.8rem);
     background-color: $white-10;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     padding: 5rem 3rem 0 3rem;
     position: relative;
     z-index: 1;
@@ -714,7 +701,7 @@ nav {
 
             p {
                 font-size: 1.3rem;
-                color: $blue-20;
+                color: $black-500;
                 opacity: .78;
                 text-indent: .85rem;
             }
@@ -738,13 +725,13 @@ nav {
     }
 
     .areas__content {
-        @include align(center, center, row, 3rem);
+        @include align(center, start, row, 3rem);
         width: 100%;
         flex-wrap: wrap;
 
         .areas__card {
             @include align(start, center, column, 0);
-            max-width: 280px;
+            max-width: 250px;
 
             picture {
                 @include align(start, center, column, 0);
@@ -760,12 +747,14 @@ nav {
             h3 {
                 @include align(center, center, row, 0);
                 font-size: 1.3rem;
-                color: $blue-20;
+                color: $black-900;
+                font-weight: 500;
             }
 
             p {
+                @include align(center, start, row, 0);
                 font-size: 1.3rem;
-                color: $blue-20;
+                color: $black-500;
                 opacity: .78;
                 margin: 1rem 0 0 0;
             }
@@ -793,8 +782,8 @@ nav {
         width: 100%;
         height: 3rem;
         font-size: 1.3rem;
-        color: $blue-20;
-        font-weight: 700;
+        color: $black-900;
+        font-weight: 500;
         border: none;
         outline: none;
         transition: 0.4s;
@@ -805,7 +794,7 @@ nav {
             content: '\002B';
             font-size: 2rem;
             font-weight: 500;
-            color: $red-10;
+            color: $blue-20;
         }
     }
     
@@ -820,8 +809,8 @@ nav {
         transition: max-height 0.4s ease-in-out;
     
         p {
-            font-size: 1.25rem;
-            color: $blue-20;
+            font-size: 1.2rem;
+            color: $black-500;
             font-weight: 400;
             text-indent: .85rem;
         }
@@ -837,10 +826,10 @@ nav {
 
 // MAIN STYLE -> CONTACT
 #contact__container {
-    @include align(start, center, column, 2.2rem);
+    @include align(center, center, column, 2.2rem);
     background-color: $red-10;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     padding: 0 3rem;
     position: relative;
     z-index: 1;
@@ -855,19 +844,19 @@ nav {
         font-size: 1.3rem;
         color: $white-10;
         font-weight: 400;
-        text-indent: .85rem;
     }
 
     .contact__links {
-        @include align(center, start, row, 2rem);
-        width: 100%;
+        @include align(center, center, row, 2rem);
+        width: 50%;
 
         .nav__button {
             @include align(center, center, row, 1rem);
             background-color: $blue-20;
             color: $white-10;
-            width: 45%;
+            width: auto;
             height: 3.5rem;
+            padding: 0 2rem;
             border-radius: 0.5rem;
             font-size: 1.3rem;
             box-shadow: $shadow;
@@ -881,11 +870,12 @@ nav {
         }
 
         .instagram {
-            @include align(center, center, row, 0);
+            @include align(center, center, row, 1rem);
             background-color: $blue-20;
             color: $white-10;
-            width: 15%;
+            width: auto;
             height: 3.5rem;
+            padding: 0 2rem;
             border-radius: 0.5rem;
             font-size: 1.3rem;
             box-shadow: $shadow;
@@ -903,12 +893,11 @@ nav {
     span {
         font-size: .85rem;
         color: $white-10;
-        font-weight: 300;
-        opacity: .7;
+        font-weight: 400;
 
         a {
             color: $white-10;
-            text-decoration: none;
+            text-decoration: underline;
             font-weight: bold;
         }
     }
@@ -936,40 +925,57 @@ nav {
         display: none;
     }
 
+    #aboutMe__container {
+        @include align(center, center, row, 4rem);
+        padding: 0 3rem 5rem 3rem;
+
+        .aboutMe__content {
+            @include align(start, center, column, 2rem);
+            width: 30%;
+        }
+    }
+
     #questions__container {
         @include align(center, start, column, 2rem);
-        padding: 10rem 9rem 5rem 9rem;
+        padding: 5rem 3rem 5rem 3rem;
         height: auto;
 
         .accordion  {
-            width: 80%;
+            width: 50%;
         }
 
         .line {
-            width: 80%;
+            width: 50%;
         }
 
         .panel {
-            width: 80%;
+            width: 50%;
         }
     }
     
     #when__container {
-        @include align(center, center, column, 1.8rem);
+        @include align(center, start, column, 1.8rem);
 
         .why__text {
-            width: 70%;
+            width: 50%;
+        }
+    }
+
+    #why__container {
+        .why__text {
+            @include align(end, start, column, 1.8rem);
+            width: 50%;
         }
     }
 
     #areas__container {
         @include align(center, center, column, 4rem);
         height: auto;
-        padding: 7.5rem 3rem 3rem 3rem;
+        padding: 0 3rem 3rem 3rem;
 
         .areas__content {
             @include align(start, center, row, 3rem);
-            width: 65.9%;
+            width: 50%;
 
             .areas__card {
                 @include align(center, start, column, .8rem);
@@ -988,8 +994,13 @@ nav {
 
     #mission__cotainer {
         @include align(center, center, column, 2.5rem);
-        padding: 5rem 9rem;
+        padding: 5rem 3rem;
+        width: 100%;
         height: 60vh;
+
+        p {
+            width: 50%;
+        }
     }
 
     #contact__container {
@@ -1047,16 +1058,6 @@ nav {
                     font-size: 2rem;
                 }
             }
-        }
-    }
-
-    #colage__container {    
-        padding: 0;
-        display: flex;
-
-        img {
-            max-width: 400px;
-            max-height: 400px;
         }
     }
 
@@ -1253,17 +1254,6 @@ nav {
         }
     }
 
-    #colage__container {    
-        padding: 0;
-        display: flex;
-        margin: 0 0 -4.5rem 0;
-
-        img {
-            max-width: 377px;
-            max-height: 377px;
-        }
-    }
-
     #questions__container ,
     #when__container {
         height: auto;
@@ -1406,16 +1396,6 @@ nav {
         padding: 5rem 3rem 0 3rem;
     }
 
-    #colage__container {    
-        padding: 1rem;
-        display: flex;
-
-        img {
-            max-width: 333px;
-            max-height: 333px;
-        }
-    }
-
     #questions__container,
     #when__container,
     #areas__container {
@@ -1547,16 +1527,6 @@ nav {
             display: flex;
         }
     }
-
-    #colage__container {
-        padding: 1rem;
-        display: flex;
-
-        img {
-            max-width: 270px;
-            max-height: 270px;
-        }
-    }
     
     .nav__mobile-menu {
         padding: 4.5rem 3rem 0 3rem;
@@ -1576,6 +1546,7 @@ nav {
     #areas__container ,
     #when__container {
         height: auto;
+        padding: 3rem;
 
         h2 {
             font-size: 2.5rem;
@@ -1584,7 +1555,7 @@ nav {
 
     #why__container {
         @include align(start, center, column, 2.5rem);
-        padding: 5rem 3rem;
+        padding: 3rem 3rem 5rem 3rem;
         height: auto;
 
         h2 {
@@ -1601,7 +1572,7 @@ nav {
     }
 
     #mission__cotainer {
-        padding: 7.5rem 3rem 3rem 3rem;
+        padding: 0 3rem 3rem 3rem;
 
         h2 {
             font-size: 2.5rem;
@@ -1614,7 +1585,7 @@ nav {
 
     #aboutMe__container {
         @include align(center, center, column, 2.5rem);
-        padding: 10rem 3rem 4rem 3rem;
+        padding: 4rem 3rem 4rem 3rem;
         height: auto;
 
         .aboutMe__image {
@@ -1658,11 +1629,13 @@ nav {
     }
 
     #contact__container {
+        @include align(start, center, column, 2.2rem);
         height: auto;
         padding: 5rem 3rem;
 
         .contact__links {
             @include align(center, center, column, 1.5rem);
+            width: 100%;
 
             .nav__button {
                 width: 100%;

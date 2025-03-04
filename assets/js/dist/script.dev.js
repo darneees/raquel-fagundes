@@ -1,6 +1,6 @@
 "use strict";
 
-// menu mobile
+// menu mobile 
 var open = document.getElementById('open__menu');
 var close = document.getElementById('close__menu');
 var modal = document.getElementById('menu__modal');
@@ -175,8 +175,8 @@ function reset() {
   form.reset();
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('value').value = '';
+  document.getElementById('phone').value = ''; // document.getElementById('value').value = '';
+
   document.getElementById('message').value = '';
 } // API Formspree
 
@@ -185,14 +185,14 @@ document.getElementById('section-form').addEventListener('submit', function (eve
   event.preventDefault();
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
-  var phone = document.getElementById('phone').value;
-  var value = document.getElementById('value').value;
+  var phone = document.getElementById('phone').value; // const value = document.getElementById('value').value;
+
   var message = document.getElementById('message').value;
   var formData = {
     name: name,
     email: email,
     phone: phone,
-    value: value,
+    // value: value,
     message: message
   };
   fetch('https://formspree.io/f/mrbgzgbj', {

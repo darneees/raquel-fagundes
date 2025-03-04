@@ -226,7 +226,7 @@ body #section-form #close-form i {
 body #section-form .banner-form {
   width: 100%;
   user-select: none;
-  padding: 44rem 0 0 0;
+  padding: 35rem 0 0 0;
 }
 body #section-form .banner-form img {
   width: 100%;
@@ -1117,7 +1117,7 @@ nav .nav__open-mobile ion-icon {
     top: 1.5rem;
   }
   body #section-form .banner-form {
-    padding: 44rem 0 0 0;
+    padding: 35rem 0 0 0;
   }
 
   nav .nav__menu {
@@ -1325,7 +1325,7 @@ nav .nav__open-mobile ion-icon {
     top: 1.5rem;
   }
   body #section-form .banner-form {
-    padding: 44rem 0 0 0;
+    padding: 40rem 0 0 0;
   }
 
   nav .nav__menu {
@@ -1611,7 +1611,7 @@ nav .nav__open-mobile ion-icon {
     padding: 4rem 2.5rem;
   }
   body #section-form .banner-form {
-    padding: 40rem 0 0 0;
+    padding: 35rem 0 0 0;
   }
 
   nav .nav__menu {
@@ -1754,6 +1754,6 @@ nav .nav__open-mobile ion-icon {
     overflow-x: hidden;
   }
   body #section-form .banner-form {
-    padding: 47rem 0 0 0;
+    padding: 45rem 0 0 0;
   }
 }

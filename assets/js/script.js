@@ -1,4 +1,4 @@
-// menu mobile
+// menu mobile 
 const open = document.getElementById('open__menu');
 const close = document.getElementById('close__menu');
 const modal = document.getElementById('menu__modal');
@@ -179,7 +179,7 @@ function reset() {
     document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
-    document.getElementById('value').value = '';
+    // document.getElementById('value').value = '';
     document.getElementById('message').value = '';
 }
 
@@ -190,14 +190,14 @@ document.getElementById('section-form').addEventListener('submit', function (eve
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
-    const value = document.getElementById('value').value;
+    // const value = document.getElementById('value').value;
     const message = document.getElementById('message').value;
 
     const formData = {
         name: name,
         email: email,
         phone: phone,
-        value: value,
+        // value: value,
         message: message
     };
 

@@ -231,7 +231,7 @@ body #section-form .banner-form {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 44rem 0 0 0;
+  padding: 35rem 0 0 0;
 }
 body #section-form .banner-form img {
   width: 100%;
@@ -1141,7 +1141,7 @@ nav .nav__open-mobile ion-icon {
     top: 1.5rem;
   }
   body #section-form .banner-form {
-    padding: 44rem 0 0 0;
+    padding: 35rem 0 0 0;
   }
   nav .nav__menu {
     display: flex;
@@ -1338,7 +1338,7 @@ nav .nav__open-mobile ion-icon {
     top: 1.5rem;
   }
   body #section-form .banner-form {
-    padding: 44rem 0 0 0;
+    padding: 40rem 0 0 0;
   }
   nav .nav__menu {
     display: none;
@@ -1605,7 +1605,7 @@ nav .nav__open-mobile ion-icon {
     padding: 4rem 2.5rem;
   }
   body #section-form .banner-form {
-    padding: 40rem 0 0 0;
+    padding: 35rem 0 0 0;
   }
   nav .nav__menu {
     display: none;
@@ -1740,6 +1740,6 @@ nav .nav__open-mobile ion-icon {
     overflow-x: hidden;
   }
   body #section-form .banner-form {
-    padding: 47rem 0 0 0;
+    padding: 45rem 0 0 0;
   }
 }/*# sourceMappingURL=style.css.map */
